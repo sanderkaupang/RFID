@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Excel = Microsoft.Office.Interop.Excel;
 
-
+// Dette er en test
 
 namespace WindowsFormsApp1
 {
