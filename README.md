@@ -1,9 +1,3 @@
-██████  ███████ ██ ██████      ██      ██ ██████  ██████   █████  ██████  ██    ██ 
-██   ██ ██      ██ ██   ██     ██      ██ ██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
-██████  █████   ██ ██   ██     ██      ██ ██████  ██████  ███████ ██████    ████   
-██   ██ ██      ██ ██   ██     ██      ██ ██   ██ ██   ██ ██   ██ ██   ██    ██    
-██   ██ ██      ██ ██████      ███████ ██ ██████  ██   ██ ██   ██ ██   ██    ██    
-                                                                                   
 
 This project is motivated by Education, object-oriented programming.
 The project deals with a library system for submitting and lending books from the library.
