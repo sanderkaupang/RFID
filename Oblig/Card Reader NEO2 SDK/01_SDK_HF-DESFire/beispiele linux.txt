@@ -1,0 +1,38 @@
+
+
+Prüfsumme ist CheckSum8 Xor über das gesamte Telegramm vor der Prüfsumme:
+
+http://www.scadacore.com/field-tools/programming-calculators/online-checksum-calculator/
+
+
+GetReaderUID
+============
+
+50 00 00 05 55
+
+Schnittstelle prüfen: stty -F /dev/ttyS0
+
+Manuell auf Schnittstelle senden: echo -e "\x50\x00\x00\x05\x55" > /dev/ttyS0
+
+Wenn Screen installiert ist, sehen sie immerhin eine Reaktion:
+
+Dieses Kommando öffnet eine Verbindung vom COM-Port zur Bildschirmanzeige:
+	screen /dev/ttyUSB0 115200
+Beenden von Sceen:		[Strg] + [A], [D]
+
+Weitere Kommandos von Screen:
+[Strg] + [A], [C]		Öffnet ein neues Fenster, damit könnten sie auch statt 2 Terminals arbeiten
+[Strg] + [A], [Leertaste]	Wechselt zwischen Fenstern
+[Strg] + [A], [?]		Übersicht der Tastenkürzel
+
+
+
+GetReaderFirmware
+=================
+
+50 00 00 04 54
+
+Manuell auf Schnittstelle senden: echo -e "\x50\x00\x00\x04\x54" > /dev/ttyS0
+
+Weil die Antwort bei vielen FW-Versionen ein Text ist und nicht nur eine Nummer, ist mit einer lesbaren Antwort zu rechnen.
+

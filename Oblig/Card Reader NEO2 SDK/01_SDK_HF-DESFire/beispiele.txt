@@ -1,0 +1,232 @@
+
+
+Prüfsumme ist CheckSum8 Xor über das gesamte Telegramm vor der Prüfsumme:
+
+http://www.scadacore.com/field-tools/programming-calculators/online-checksum-calculator/
+
+
+FW Version abfragen
+===================
+
+Kommando zum RFID: 50 00 00 04 54
+
+Beispielantwort vom RFID: 50 00 04 04 71 17 03 20 15 
+Bytes "71 17 03 20" ist die Firmware-Version.
+
+Beispielantwort vom RFID: 50 00 22 04 4F 45 4D 2D 44 45 53 2D 4D 38 39 30 2D 54 54 4C 20 32 30 31 39 30 36 30 34 20 31 31 3A 33 32 20 41 4D 61
+Die Bytes enthalten die Firmware-Version als Text: "4F 45 4D 2D 44 45 53 2D 4D 38 39 30 2D 54 54 4C 20 32 30 31 39 30 36 30 34 20 31 31 3A 33 32 20 41 4D" = OEM-DES-M890-TTL 20190604 11:32 AM
+
+
+
+
+ISO 15693
+=========
+
+Inventory
+¯¯¯¯¯¯¯¯¯
+Kommando zum RFID, 16 Slot Inventory:
+>>  50 00 03 A1 06 00 00 F4
+50 = Telegrammanfang
+00 03 = 3 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+A1 = Kommandokode, 5.4.1 I2_INVENTORY(CMD=0xA1)
+06 = Flag, 16 Slot inventory; 26 wäre 1 slot inventory
+00 = AFI, 0x00 = unbenutzt
+00 = Keine UID mitgeschickt, keine Karte gezielt ansprechen
+F4 = Prüfsumme
+
+400 ms Time-Out
+
+
+
+Kommando zum RFID, 1 Slot Inventory:
+>>  50 00 03 A1 26 00 00 D4
+50 = Telegrammanfang
+00 03 = 3 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+A1 = Kommandokode, 5.4.1 I2_INVENTORY(CMD=0xA1)
+26 = Flag, 1 Slot inventory; 06 wäre 16 slot inventory
+00 = AFI, 0x00 = unbenutzt
+00 = Keine UID mitgeschickt, keine Karte gezielt ansprechen
+D4 = Prüfsumme
+
+25 ms Time-Out
+
+
+
+
+
+Antwort vom RFID:
+<<  50 00 08 A1 F5 25 26 9F 00 01 04 E0 75 ---success
+50 = Telegrammanfang
+00 08 = 8 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+A1 = Kommandokode, 5.4.1 I2_INVENTORY(CMD=0xA1)
+F5 25 26 9F 00 01 04 E0 = 8 Byte UID
+75 = Prüfsumme
+
+
+ISO 14443A
+==========
+
+
+Fehlermeldung: Keine Karte vorhanden
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Kommando zum RFID:
+>>  50 00 02 22 10 26 46
+50 = Telegrammanfang
+00 02 = 2 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+22 = Kommandokode, 5.1.2 PICCACTIVATE(CMD=0x22)
+10 = Antenne für 10 ms abschalten
+26 = Request IDLE
+46 = Prüfsumme
+
+Antwort vom RFID:
+<<  F0 00 01 22 E0 33 ---failure
+F0 = Telegrammanfang Fehlermeldung
+00 01 = 1 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+22 = Kommandokode, 5.1.2 PICCACTIVATE(CMD=0x22)
+E0 = Keine Antwort von RFID-Datenträger erhalten (Fehlerkode fehlt in der Liste für ISO 14443A)
+33 = Prüfsumme
+
+
+Erfassung Mifare mit 7 Byte langer UID
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Kommando zum RFID:
+>>  50 00 02 22 10 26 46
+siehe zuvor
+
+Antwort vom RFID:
+<<  50 00 0B 22 44 00 08 07 04 49 69 AA 2B 2B 80 3C ---success
+50 = Telegrammanfang
+00 0B = 11 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+22 = Kommandokode
+44 00 = ATQ (Answer To Request), u.a. Typkennung
+08 = SAK (Select AcKnowledge), 
+07 = 7 Byte lange UID folgt
+04 49 69 AA 2B 2B 80 = 7 Byte lange UID
+3C = Prüfsumme
+
+Authenticate bei 7 Byte langer UID
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+>>  50 00 02 22 10 26 46 <— Active-IDLE
+<<  50 00 0B 22 44 00 08 07 04 4D 51 3A 4D 4D 80 90 ---success
+>>  50 00 0C 16 60 00 3A 4D 4D 80 FF FF FF FF FF FF 90 <— Authenticate
+<<  50 00 00 16 46 ---success
+
+
+Erfassung Mifare mit 4 Byte langer UID
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Kommando zum RFID:
+>>  50 00 02 22 10 26 46
+siehe zuvor
+
+<<  50 00 08 22 02 00 18 04 03 E7 FB 6B 10 ---success
+50 = Telegrammanfang
+00 08 = 8 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+22 = Kommandokode
+02 00 = ATQ (Answer To Request), u.a. Typkennung
+18 = SAK (Select AcKnowledge), 
+04 = 4 Byte lange UID folgt
+03 E7 FB 6B = 4 Byte lange UID
+10 = Prüfsumme
+
+
+AUTOLISTCARDS
+=============
+
+Autolistcards einschalten
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Kommando zum RFID:
+>> 50 00 05 23 FF 64 00 01 00 EC
+50 = Telegrammanfang
+00 05 = 5 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+23 = Kommandokode, 5.1.3 AUTOLISTCARD(CMD=0x23)
+FF = Alle unterstützten Kartentypen*
+64 = 100 dezimal, Intervallzeit zwischen Erfassungen
+00 = Antennennummer, 00 = alle Antennen
+01 = Wann soll ein Telegramm geschickt werden**
+00 = Reserviert für zukünftigen Gebrauch
+ED = Prüfsumme
+
+Antwort vom RFID: 50 00 00 23 73 (Kommandoquittierung)
+
+50 00 05 23 FF 64 00 04 05 EC (Sonderentwicklung mit LED-Nachleuchten)
+
+50 00 05 23 FF 64 01 04 00 E8 (ständig melden)
+
+
+
+Ausgabe eines Datenträgers bei ISO14443A
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+50 00 0D 23 01 64 03 01 00 04 00 08 04 1D 13 D1 A0 6E
+
+Die Bytes im Einzelnen:
+50 = Telegrammstart
+00 0D = 13 Bytes zwischen Kommandocode und Prüfsumme
+23 = Kommandokode
+01 = ISO 14443A
+64 = Wiederhole alle 100 ms
+03 = Erfasst auf Antenne  3
+01 = Nur bei Erstkontakt benachrichtigen
+00 = ungenutzt
+04 00 = ATQ
+08 = SAK
+04 = Es folgt eine 4 Byte lange UID
+1D 13 D1 A0 = UID
+6E = Prüfsumme
+
+
+
+
+Ausgabe eines Datenträgers bei ISO15693
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+50 00 0D 23 04 64 03 04 00 5A 3D F8 01 00 00 05 E0 62 
+
+Die Bytes im Einzelnen:
+50 = Telegrammstart
+00 0D = 13 Bytes zwischen Kommandocode und Prüfsumme
+23 = Kommandokode
+04 = ISO15693
+64 = Wiederhole alle 100 ms
+03 = Erfasst auf Antenne 3
+04 = Ständig benachrichtigen, wenn im Erfassungsbereich
+00 = ungenutzt
+5A 3D F8 01 00 00 05 E0 = 8 Bytes lange UID
+62 = Prüfsumme
+
+
+
+Autolistcards ausschalten
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Kommando zum RFID:
+>> 50 00 05 23 FF 00 01 01 00 89 oder 50 00 05 23 00 00 00 00 00 76
+50 = Telegrammanfang
+00 05 = 5 Byte Nutzlast zwischen Kommandokode und Prüfsumme
+23 = Kommandokode, 5.1.3 AUTOLISTCARD(CMD=0x23)
+FF = Alle unterstützten Kartentypen*
+00 = Intervallzeit zwischen Erfassungen, 00 SCHALTET AB
+01 = Antennennummer
+01 = Wann soll ein Telegramm geschickt werden**
+00 = Reserviert für zukünftigen Gebrauch
+89 = Prüfsumme
+
+Antwort vom RFID: 50 00 00 23 73 (Kommandoquittierung)
+
+
+* Auswahl RFID-Datenträgertyp
+0x01: nur ISO14443 A
+0x04: nur ISO15693
+0x05: ISO15693 + ISO14443 A
+0x00, 0xFF: Alle Datenträgertypen, die von diesem Gerät unterstützt werden
+
+**
+0x01 = Nachricht, wenn ein Datenträger in den Erfassungsbereich eintritt
+0x02 = Nachricht, wenn ein Datenträger den Erfassungsbereich verlässt
+0x03 = Nachricht beim Eintreten und Verlassen des Erfassungsbereiches
+0x04 = Nachricht ständig, solange ein Datenträger im Erfassungsbereich ist, das Nachrichtenintervall entspricht dem Abfrageintervall
+
+
+50 00 05 23 01 01 00 04 00 72 <- Nur ISO 14443A, nur 1 ms Pause
+50 00 05 23 01 64 00 04 00 17 <- Nur ISO 14443A, 100 ms Pause
+50 00 05 23 04 01 00 04 00 77 <- Nur ISO 15693, nur 1 ms Pause
+50 00 05 23 FF 01 00 04 00 8C <- alle Datenträgertypen, nur 1 ms Pause
+50 00 05 23 FF 64 02 01 00 EE
+50 00 05 23 FF 64 02 04 00 EB

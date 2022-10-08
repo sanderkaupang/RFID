@@ -1,0 +1,131 @@
+There is no direct support of counter commands for the 3 counters of Mifare Ultralight EV1, but you can use the PICCTRANSFER command to communicate directly with the RFID-PICC.
+
+Reference Document: Mifare Ultralight EV1 - Product Data Sheet (2019-04-09, v3.3).pdf
+
+
+
+Begin Communication with PICCActivate
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+>>  50 00 02 22 10 26 46
+The Bytes in Detail:
+50    = Start of telegram
+00 02 = 2 Bytes of payload between command code and checksum
+22    = Command code
+10    = 10 ms antenna pause for chip reset
+26    = Request IDLE
+46    = Checksum
+
+<<  50 00 0B 22 44 00 00 07 04 97 CE C2 37 30 80 22
+
+The Bytes in Detail:
+50    = Start of telegram
+00 0B = 11 Bytes of payload between command code and checksum
+22    = Command code
+44 00 = ATQ (Answer To Request), contains type designation
+00    = SAK (Select AcKnowledge)
+00    = 7 Bytes of UID follow
+04 97 
+CE C2 
+37 30 
+80    = UID
+22    = Checksum
+
+
+Now Communicate using direct PICCTRANSFER
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+GET_VERSION (Chapter 10.1 page 20)
+
+>>  50 00 01 2E 60 1F 
+The Bytes in Detail:
+50    = Start of telegram
+00 01 = 1 Byte of payload between command code and checksum
+2E    = PICCTRANSFER
+60    = GET_VERSION
+1F    = Checksum
+
+
+<<  50 00 08 2E 00 04 03 01 01 00 0B 03 79
+version info: 00 04 03 01 01 00 0B 03
+=> see table 15 of MF Ultralight EV1 data sheet
+
+
+
+READ_CNT (Chapter 10.6, page 27)
+
+>>  50 00 02 2E 39 00 45 
+The Bytes in Detail:
+50    = Start of telegram
+00 02 = 2 Bytes of payload between command code and checksum
+2E    = Command code
+39    = READ_CNT
+00    = Number of counter
+45    = Checksum
+
+<<  50 00 03 2E 00 00 00 7D
+The Bytes in Detail:
+50    = Start of telegram
+00 03 = 2 Bytes of payload between command code and checksum
+2E    = PICCTRANSFER
+00    = LSB of Counter
+00    = next Byte of Counter
+00    = MSB of Counter
+7D    = Checksum
+
+
+
+INCR_CNT (Chapter 10.7, page 28)
+
+>>  50 00 06 2E A5 00 00 01 00 00 DC 
+The Bytes in Detail:
+50    = Start of telegram
+00 06 = 2 Bytes of payload between command code and checksum
+2E    = PICCTRANSFER
+A5    = INCR_CNT
+00    = Number of counter
+00    = LSB of Counter
+01    = next Byte of Counter
+00    = MSB of Counter
+00    = Padding Byte
+DC    = Checksum
+
+The reply may be a failure message, but, …
+<<  F0 00 01 2E 02 DD ---failure
+…when you readout the counter, the value is added:
+>>  50 00 02 2E 39 00 45 
+<<  50 00 03 2E 00 01 00 7C ---success
+
+Next adding: 
+>>  50 00 06 2E A5 00 00 01 00 00 DC 
+<<  F0 00 01 2E 02 DD ---failure
+>>  50 00 02 2E 39 00 45 
+<<  50 00 03 2E 00 02 00 7F ---success
+
+
+
+To check if an error occured during counter operations, use this command to check:
+
+CHECK_TEARING EVENT (Chapter 10.10, page 31)
+
+00 = Number of counter
+>>  50 00 02 2E 3E 00 42 
+The Bytes in Detail:
+50    = Start of telegram
+00 02 = 2 Bytes of payload between command code and checksum
+2E    = PICCTRANSFER
+3E    = READ_CNT
+00    = Number of counter
+42    = Checksum
+
+<<  50 00 01 2E BD C2 ---success
+The Bytes in Detail:
+50    = Start of telegram
+00 01 = 1 Byte of payload between command code and checksum
+2E    = PICCTRANSFER
+BD    = Result flag
+C2    = Checksum
+
+BD is the correct result when no problems appeared.
+
+
+

@@ -1,0 +1,6 @@
+Active-IDLE= Send REQ, Anticollision, select
+Active-ALL = Send WUPA , Anticollision, select 
+
+Active-IDLE will only work with cards that are not HALTED.
+
+Active-ALL can be for all cards.

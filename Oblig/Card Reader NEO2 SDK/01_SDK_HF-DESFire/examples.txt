@@ -1,0 +1,241 @@
+
+
+checksum is CheckSum8 Xor over the complete telegram before the checksum itself:
+
+http://www.scadacore.com/field-tools/programming-calculators/online-checksum-calculator/
+
+
+Read FW Number
+==============
+
+Command to RFID: 50 00 00 04 54
+
+Reply Example from RFID: 50 00 04 04 71 17 03 20 15 
+
+Bytes "71 17 03 20" are the Firmware number.
+
+
+
+ISO 15693
+=========
+
+Inventory
+¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 03 A1 06 00 00 F4
+50 = start of telegram
+00 03 = 3 bytes payload between command code and checksum
+A1 = command code, 5.4.1 I2_INVENTORY(CMD=0xA1)
+06 = Flag, 16 Slot inventory; 26 is 1 slot inventory
+00 = AFI, 0x00 = no AFI used
+00 = no UID will be sent with this telegram, no RFID tag will be addressed directly
+F4 = checksum
+
+Reply from RFID:
+<<  50 00 08 A1 F5 25 26 9F 00 01 04 E0 75 ---success
+50 = start of telegram
+00 08 = 8 bytes payload between command code and checksum
+A1 = command code, 5.4.1 I2_INVENTORY(CMD=0xA1)
+F5 25 26 9F 00 01 04 E0 = 8 byte UID
+75 = checksum
+
+
+ISO 14443A
+==========
+
+
+Error happening: No tag in field
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 02 22 10 26 46
+50 = start of telegram
+00 02 = 2 bytes payload between command code and checksum
+22 = command code, 5.1.2 PICCACTIVATE(CMD=0x22)
+10 = shut off antenna for 10 ms
+26 = Request IDLE
+46 = checksum
+
+Reply from RFID:
+<<  F0 00 01 22 E0 33 ---failure
+F0 = start of telegram with error messsage
+00 01 = 1 byte payload between command code and checksum
+22 = command code, 5.1.2 PICCACTIVATE(CMD=0x22)
+E0 = no card response within given time indicating by timeout
+33 = checksum
+
+
+Detects Mifare with 7 byte long UID
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 02 22 10 26 46
+pls. see example before
+
+Reply from RFID:
+<<  50 00 0B 22 44 00 08 07 04 49 69 AA 2B 2B 80 3C ---success
+50 = start of telegram
+00 0B = 11 bytes payload between command code and checksum
+22 = command code
+44 00 = ATQ (Answer To Request), contains type designation
+08 = SAK (Select AcKnowledge), 
+07 = 7 byte long UID follows
+04 49 69 AA 2B 2B 80 = 7 byte long UID
+3C = checksum
+
+
+Detects Mifare with 4 byte long UID
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 02 22 10 26 46
+pls. see example before
+
+<<  50 00 08 22 02 00 18 04 03 E7 FB 6B 10 ---success
+50 = start of telegram
+00 08 = 8 bytes payload between command code and checksum
+22 = command code
+02 00 = ATQ (Answer To Request), contains type designation
+18 = SAK (Select AcKnowledge), 
+04 = 4 byte long UID follows
+03 E7 FB 6B = 4 byte long UID
+10 = checksum
+
+
+Mifare Authenticate
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 0C 16 60 05 03 E7 FB 6B FF FF FF FF FF FF 5B
+50 = start of telegram
+00 0C = 12 bytes payload between command code and checksum
+16 = command code
+60 = authenticate with Key A, use 0x61 for Key B
+05 = authenticate for block #5
+03 E7 FB 6B = 4 byte long UID of card
+FF FF FF FF FF FF = Key
+5B = checksum
+
+Reply from RFID:
+<<  50 00 00 16 46 ---success
+
+
+Mifare Read Block
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 01 17 05 43
+50 = start of telegram
+00 01 = 1 byte payload between command code and checksum
+17 = command code
+05 = read block #5
+43 = checksum
+
+Reply from RFID:
+<<  50 00 10 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 57
+50 = start of telegram
+00 10 = 17 bytes payload between command code and checksum
+17 = command code
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 = 16 Bytes of read block
+57 = checksum
+
+
+Mifare Write Block
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>>  50 00 11 18 05 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 5C 
+50 = start of telegram
+00 11 = 18 bytes payload between command code and checksum
+18 = command code
+05 = write block #5
+55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 = 16 Bytes to write to target block
+5C = checksum
+
+Reply from RFID:
+<<  50 00 00 18 48 ---success
+
+
+
+AUTOLISTCARDS
+=============
+
+Switch ON Autolistcards
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>> 50 00 05 23 FF 64 00 01 00 EC
+50 = start of telegram
+00 05 = 5 bytes payload between command code and checksum
+23 = command code, 5.1.3 AUTOLISTCARD(CMD=0x23)
+FF = all supported tag types*
+64 = 100 decimal, interval between tag inventory in milliseconds
+00 = antenna number, 00 = all antennas
+01 = when shall be sent a telegram**
+00 = Reserved for Future Use, do not send other value than 0x00 except for special firmware
+ED = checksum
+
+Reply from RFID: 50 00 00 23 73 (confirmation from RFID device)
+
+
+
+Output for a data tag of type ISO14443A
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+50 00 0D 23 01 64 03 01 00 04 00 08 04 1D 13 D1 A0 6E
+
+The Bytes in detail:
+50 = start of telegram
+00 0D = 13 Bytes payload between command code and checksum
+23 = command code, 5.1.3 AUTOLISTCARD(CMD=0x23)
+01 = ISO 14443A
+64 = Repeat interval 100 ms
+03 = Detected on antenna  3
+01 = notify when tag is detected first
+00 = uused
+04 00 = ATQ
+08 = SAK
+04 = A 4 Bytes long UID follows
+1D 13 D1 A0 = UID
+6E = checksum
+
+
+
+Output for a data tag of type ISO15693
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+50 00 0D 23 04 64 03 04 00 5A 3D F8 01 00 00 05 E0 62 
+
+The Bytes in detail:
+50 = start of telegram
+00 0D = 13 Bytes payload between command code and checksum
+23 = command code, 5.1.3 AUTOLISTCARD(CMD=0x23)
+04 = ISO15693
+64 = Repeat interval 100 ms
+03 = Detected on antenna  3
+04 = notify steadily as long as tag can be detected
+00 = unused
+5A 3D F8 01 00 00 05 E0 = 8 Bytes long UID
+62 = checksum
+
+
+
+Switch OFF Autolistcards
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Command to RFID:
+>> 50 00 05 23 FF 00 01 01 00 89
+50 = start of telegram
+00 05 = 5 bytes payload between command code and checksum
+23 = command code, 5.1.3 AUTOLISTCARD(CMD=0x23)
+FF = all supported tag types*
+00 = interval between tag inventory, 00 switches OFF
+01 = antenna number
+01 = when shall be sent a telegram**
+00 = Reserved for Future Use, do not send other value than 0x00 except for special firmware
+89 = checksum
+
+Reply from RFID: 50 00 00 23 73 (confirmation from RFID device)
+
+
+* Select Tag Type
+0x01: ISO14443 A card only
+0x04: ISO15693 Only
+0x05: ISO15693 + ISO14443 A
+0x00, 0xFF: All card type the module supported
+
+**
+0x01 = NOTICE when a tag enters the field
+0x02 = NOTICE when a tag leaves the field
+0x03 = NOTICE when a tag enters and leaves the field
+0x04 = NOTICE continuously as long as the tag is in field, notification interval is the inventory interval

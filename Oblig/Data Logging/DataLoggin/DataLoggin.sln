@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLoggin", "DataLoggin.csproj", "{0159C995-643C-4EE1-90FB-80A4A3EE94E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0159C995-643C-4EE1-90FB-80A4A3EE94E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0159C995-643C-4EE1-90FB-80A4A3EE94E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0159C995-643C-4EE1-90FB-80A4A3EE94E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0159C995-643C-4EE1-90FB-80A4A3EE94E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78EB1648-05D9-4858-BCD7-86FD777C1D69}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+NEVER use this software to change the Baud rate!
+
+Bitte NIEMALS mit dieser Software die Baudrate ändern!
+

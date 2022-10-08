@@ -1,0 +1,9 @@
+Normalerweise werden USB-Treiber automatisch vom Windows-Betriebssystem installiert.
+Normally the USB drivers are automatically installed with Windows operating systems.
+
+Sollte dies nicht funktionieren, können Sie die aktuellsten Treiber hier herunterladen:
+If this does not work, you can download the latest drivers here:
+
+http://www.wch-ic.com/search?q=CH340&t=downloads
+
+http://www.wch-ic.com/products/CH340.html
