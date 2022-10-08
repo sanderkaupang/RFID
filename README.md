@@ -1,11 +1,13 @@
 
 This project is motivated by Education, object-oriented programming.
 The project deals with a library system for submitting and lending books from the library.
+
 ----------------------------------------------------------------------------------------------------
 Languages: C#, SQL, HTML5
 IDE: Visual Studio 2022, Microsoft SQL Server Management Studio 18
 Frameworks: ASP.Net, WinForm, SQL-server
 Hardwear: Neo2  RFID-reader with 5 tags
+
 ----------------------------------------------------------------------------------------------------
 Files located at:
 
@@ -19,6 +21,7 @@ Other end users can see if the book they want is in the library or borrowed, pos
 
 RFID_LibraryDatabase (SQL-server)
 Set up the database and enter test values ​​as well as values ​​from the RFID reader.
+
 ----------------------------------------------------------------------------------------------------
 How to start
 1) Download Zip-folder 
