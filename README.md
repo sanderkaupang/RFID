@@ -3,10 +3,10 @@ This project is motivated by Education, object-oriented programming.
 The project deals with a library system for submitting and lending books from the library.
 
 ----------------------------------------------------------------------------------------------------
-Languages: C#, SQL, HTML5
-IDE: Visual Studio 2022, Microsoft SQL Server Management Studio 18
-Frameworks: ASP.Net, WinForm, SQL-server
-Hardwear: Neo2  RFID-reader with 5 tags
+Languages: C#, SQL, HTML5.
+IDE: Visual Studio 2022, Microsoft SQL Server Management Studio 18.
+Frameworks: ASP.Net, WinForm, SQL-server.
+Hardwear: Neo2  RFID-reader with 5 tags.
 
 ----------------------------------------------------------------------------------------------------
 Files located at:
