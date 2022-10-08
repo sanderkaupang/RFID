@@ -13,6 +13,8 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 // Dette er en test
 
+// Kan du se dette ? 
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
