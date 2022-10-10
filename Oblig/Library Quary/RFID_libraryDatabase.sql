@@ -9,8 +9,8 @@ go
 CREATE TABLE AUTHOR
 ( 
 	authorId             integer  NOT NULL ,
-	fName                char(40)  NULL ,
-	lName                char(40)  NULL 
+	AutherFirstName               char(40)  NULL ,
+	AutherLastName               char(40)  NULL 
 )
 go
 
@@ -19,7 +19,7 @@ CREATE TABLE BOOK
 	bookId               integer  NOT NULL ,
 	typeId               integer  NOT NULL ,
 	authorId             integer  NOT NULL ,
-	name                 char(40)  NULL ,
+	Title                 char(40)  NULL ,
 	pagecount            integer  NULL 
 )
 go
@@ -57,7 +57,7 @@ go
 CREATE TABLE TYPE
 ( 
 	typeId               integer  NOT NULL ,
-	Name                 char(40)  NULL 
+	TypeName                 char(40)  NULL 
 )
 go
 

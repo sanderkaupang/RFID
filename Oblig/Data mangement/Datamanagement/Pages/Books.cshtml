@@ -1,0 +1,40 @@
+﻿@page
+@model Datamanagement.Pages.BooksModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+
+<div>
+    <h1>Books</h1>
+    Below you see all the Books in the Book Store:<br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>BookId</th>
+                <th>Title</th>
+                <th>TypeName</th>
+                <th>Auther First Name</th>
+                <th>Auther Last Name</th>
+                <th>Pagecount</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.books)
+            {
+                <tr>
+                    <td> @book.BookId </td>
+                    <td><a href="./EditBook?bookid=@book.BookId">@book.Title</a> </td>
+                    <td> @book.Title </td>
+                    <td> @book.AutherFirstName </td>
+                    <td> @book.AutherLastName </td>
+                    <td> @book.Pagecount </td>
+                    <td> @book.TypeName </td>
+                    <td><a href="./DeleteBook?bookid=@book.BookId" class="btn btn-danger" role="button">Delete Book</a> </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="./NewBook" class="btn btn-info" role="button">New Book</a>
+</div>
