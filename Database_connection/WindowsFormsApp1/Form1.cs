@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         string LibraryConfig =
-        ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
+        ConfigurationManager.ConnectionStrings["RFID_Library"].ConnectionString;
 
         
 
