@@ -1,8 +1,11 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using Datamanagement.Models;
 namespace Datamanagement.Models
 {
+
+
     public class Book
     {
         public int BookId { get; set; }
@@ -12,36 +15,70 @@ namespace Datamanagement.Models
         public string AutherFirstName { get; set; }
         public string AutherLastName { get; set; }
 
-
-
         public List<Book> GetBooks(string connectionString)
         {
+            string ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=RFID_Library;Integrated Security=True; TrustServerCertificate=True";
+            string errormsg = null;
             List<Book> bookList = new List<Book>();
-            SqlConnection con = new SqlConnection (connectionString);
-            string selectSQL = "select BookId, Title, Isbn, PublisherName, AuthorName, CategoryName from GetBookData";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(selectSQL, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr != null)
+            try
             {
-                while (dr.Read())
+                SqlConnection con = new SqlConnection(ConnectionString);
+                string selectSQL = "select bookId, Title, pagecount, AutherFirstName, AutherLastName, TypeName from GetBookData";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(selectSQL, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null)
                 {
-                    Book book = new Book();
-                    book.BookId = Convert.ToInt32(dr["BookId"]);
-                    book.Pagecount = Convert.ToInt32(dr["pagecount"]);
-                    book.Title = dr["Title"].ToString();
-                    book.TypeName = dr["TypeName"].ToString();
-                    book.AutherLastName = dr["AutherLastName"].ToString();
-                    book.AutherFirstName = dr["AutherFirstName"].ToString();
+                    while (dr.Read())
+                    {
+                        Book book = new Book();
+                        book.BookId = Convert.ToInt32(dr["BookId"]);
+                        book.Pagecount = Convert.ToInt32(dr["pagecount"]);
+                        book.Title = dr["Title"].ToString();
+                        book.TypeName = dr["TypeName"].ToString();
+                        book.AutherLastName = dr["AutherLastName"].ToString();
+                        book.AutherFirstName = dr["AutherFirstName"].ToString();
+
+                        bookList.Add(book);
+                    }
                 }
+                return bookList;
+
             }
-            return bookList;
+            catch (Exception)
+            {
+
+                throw;
+            }
+            //SqlConnection con = new SqlConnection(connectionString);
+            //string selectSQL = "select BookId, Title, Isbn, PublisherName, AuthorName, CategoryName from GetBookData";
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand(selectSQL, con);
+            //SqlDataReader dr = cmd.ExecuteReader();
+            //if (dr != null)
+            //{
+            //    while (dr.Read())
+            //    {
+            //        Book book = new Book();
+            //        book.BookId = Convert.ToInt32(dr["BookId"]);
+            //        book.Pagecount = Convert.ToInt32(dr["pagecount"]);
+            //        book.Title = dr["Title"].ToString();
+            //        book.TypeName = dr["TypeName"].ToString();
+            //        book.AutherLastName = dr["AutherLastName"].ToString();
+            //        book.AutherFirstName = dr["AutherFirstName"].ToString();
+
+            //        bookList.Add(book);
+            //    }
+            //}
+            //return bookList;
         }
 
         public Book GetBookData(string connectionString, int bookId)
         {
+            
             SqlConnection con = new SqlConnection(connectionString);
-            string selectSQL = "select BookId, Title, Isbn, PublisherName, AuthorName, CategoryNamefrom GetBookData where BookId = " + bookId;
+            string selectSQL = "select bookId,pagecount, Title, AutherFirstName, AutheLastName, TypeName from GetBookData where bookId = " + bookId;
             con.Open();
             SqlCommand cmd = new SqlCommand(selectSQL, con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -60,19 +97,26 @@ namespace Datamanagement.Models
             }
             return book;
         }
+
+        public string ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=RFID_Library;Integrated Security=True; TrustServerCertificate=True";
         public void CreateBook(string connectionString, Book book)
         {
             try
             {
+
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
+                    
                     SqlCommand cmd = new SqlCommand("CreateBook", con);
                     cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@bookId", book.BookId));
                     cmd.Parameters.Add(new SqlParameter("@Title", book.Title));
                     cmd.Parameters.Add(new SqlParameter("@pagecount", book.Pagecount));
                     cmd.Parameters.Add(new SqlParameter("@AutherLastName", book.AutherLastName));
-                    cmd.Parameters.Add(new SqlParameter("@AutherFirstName", book.AutherFirstName));
+                    //cmd.Parameters.Add(new SqlParameter("@AutherFirstName", book.AutherFirstName));
                     cmd.Parameters.Add(new SqlParameter("@TypeName", book.TypeName));
+
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -89,7 +133,7 @@ namespace Datamanagement.Models
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    SqlCommand cmd = new SqlCommand("UpdateBook", con);
+                    SqlCommand cmd = new SqlCommand("SP_UpdateBook", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@BookId", book.BookId));
                     cmd.Parameters.Add(new SqlParameter("@Title", book.Title));
@@ -107,7 +151,7 @@ namespace Datamanagement.Models
                 throw ex;
             }
         }
-        public void DeleteBook(string connectionString, int bookId) 
+        public void DeleteBook(string connectionString, int bookId)
         {
             try
             {

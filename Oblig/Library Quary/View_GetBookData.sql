@@ -9,5 +9,5 @@ AUTHOR.AutherFirstName,
 AUTHOR.AutherLastName 
 
 FROM BOOK
-INNER JOIN AUTHOR ON BOOK.authorId = AUTHOR.authorId
-INNER JOIN TYPE ON BOOK.typeId = TYPE.typeId
+LEFT JOIN AUTHOR ON BOOK.authorId = AUTHOR.authorId
+LEFT JOIN TYPE ON BOOK.typeId = TYPE.typeId

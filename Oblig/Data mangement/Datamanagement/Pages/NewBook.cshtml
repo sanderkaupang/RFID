@@ -1,0 +1,31 @@
+﻿@page
+@model Datamanagement.Pages.NewBookModel
+@{
+    ViewData["Title"] = "New Book";
+}
+<div>
+<h1>New Book</h1>
+<form name="bookForm" id="bookForm" method="post">
+BookId:
+<br />
+<input name="bookId" type="text" class="form-control input-lg" autofocus required />
+<br />
+Title:
+<br />
+<input name="Title" type="text" class="form-control input-lg" autofocus required />
+<br />
+Type:
+<br />
+<input name="Type" type="text" class="form-control input-lg" required />
+<br />
+Author Lastname:
+<br />
+<input name="AutherLastName" type="text" class="form-control input-lg" required />
+<br />
+Pagecount:
+<br />
+<input name="Pagecount" type="text" class="form-control input-lg" required />
+<br />
+<input id="saveButton" type="submit" value="Save" class="btn btn-info" />
+</form>
+</div>

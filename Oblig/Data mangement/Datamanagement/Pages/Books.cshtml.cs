@@ -7,11 +7,12 @@ namespace Datamanagement.Pages
 {
     public class BooksModel : PageModel
     {
- 
-        
-            readonly IConfiguration _configuration;
+
+
+        readonly IConfiguration _configuration;
         public List<Book> books = new List<Book>();
-        string connectionString;
+        public string connectionString;
+        private object booklist;
 
         public BooksModel(IConfiguration configuration)
         {
@@ -19,7 +20,10 @@ namespace Datamanagement.Pages
         }
         public void OnGet()
         {
+
             books = GetBookList();
+
+
         }
         private List<Book> GetBookList()
         {

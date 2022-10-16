@@ -8,41 +8,49 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Datamanagement
 build_property.RootNamespace = Datamanagement
-build_property.ProjectDir = C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\
+build_property.ProjectDir = C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\Oblig\Data mangement\Datamanagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement
+build_property.MSBuildProjectDirectory = C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\Oblig\Data mangement\Datamanagement
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/Books.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/Books.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/Error.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/DeleteBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/Index.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/Privacy.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/NewBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3Qm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/_ViewImports.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/_ViewStart.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sande/Documents/GitHub/Oblig1s3/Oblig/Data mangement/Datamanagement/Pages/Shared/_Layout.cshtml]
+[C:/Users/sande/OneDrive/Dokumenter/GitHub/RFID/Oblig/Data mangement/Datamanagement/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-211jaxp4wn
