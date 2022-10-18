@@ -19,12 +19,15 @@ namespace Datamanagement.Pages
         {
             Book book = new Book();
             book.BookId = Convert.ToInt32(Request.Form["bookId"]);
+            book.typeId = Convert.ToInt32(Request.Form["typeId"]);
+            book.authorId = Convert.ToInt32(Request.Form["authorId"]);
             book.Title = Request.Form["Title"];
-            book.TypeName = Request.Form["Type"];
+            book.TypeName = Request.Form["TypeName"];
             book.AutherLastName = Request.Form["AutherLastName"];
             book.AutherFirstName = Request.Form["AutherFirstName"];
             book.Pagecount = Convert.ToInt32(Request.Form["Pagecount"]);
-            connectionString = _configuration.GetConnectionString("ConnectionString");
+            
+            connectionString = _configuration.GetConnectionString("MyConnectionString");
             book.CreateBook(connectionString, book);
             Response.Redirect("./Books");
         }
