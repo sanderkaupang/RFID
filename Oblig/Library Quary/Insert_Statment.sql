@@ -2,9 +2,12 @@ USE
 RFID_Library
 GO
 
-INSERT INTO PERSON(PersonID, fName,lName,phone,email,dOB)
-VALUES(123,'Ole', 'Hansen',98999400,'Ole.Hansen@gmai.com', '2000/11/11')
+INSERT INTO PERSON(PersonID, fName,lName,phone,email,dOB, Username, Password)
+VALUES(123,'Ole', 'Hansen',98999400,'Ole.Hansen@gmai.com', '2000/11/11', 1234,1412)
+INSERT INTO PERSON(fName,lName,phone,email,dOB, Username, Password)
+VALUES('Nils', 'Hansen',98999400,'Ole.Hansen@gmai.com', '2000/11/11', 1,1)
 
+SELECT * FROM PERSON
 --TESTVALUES BOOK---------------------------------
 INSERT INTO BOOK(bookId,Title,pagecount, typeId,authorId)
 VALUES(400,'Python',323, (SELECT typeId from TYPE WHERE typeId = 32), (SELECT authorId FROM AUTHOR WHERE authorId =1) )
