@@ -135,3 +135,10 @@ C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\Oblig\Data mangement\Datamanageme
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data mangement\Datamanagement\bin\Debug\net6.0\System.Memory.Data.dll

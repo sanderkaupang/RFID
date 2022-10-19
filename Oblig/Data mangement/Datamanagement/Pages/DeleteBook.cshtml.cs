@@ -17,7 +17,7 @@ namespace Datamanagement.Pages
         public void OnGet()
         {
             bookId = Convert.ToInt16(Request.Query["bookid"]);
-            connectionString = _configuration.GetConnectionString("ConnectionString");
+            connectionString = _configuration.GetConnectionString("MyConnectionString");
             Book book = new Book();
             book.DeleteBook(connectionString, bookId);
             Response.Redirect("./Books");

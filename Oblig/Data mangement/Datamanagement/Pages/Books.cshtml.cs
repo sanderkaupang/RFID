@@ -27,7 +27,7 @@ namespace Datamanagement.Pages
         }
         private List<Book> GetBookList()
         {
-            connectionString = _configuration.GetConnectionString("ConnectionString");
+            connectionString = _configuration.GetConnectionString("MyConnectionString");
             List<Book> bookList = new List<Book>();
             Book book = new Book();
             bookList = book.GetBooks(connectionString);

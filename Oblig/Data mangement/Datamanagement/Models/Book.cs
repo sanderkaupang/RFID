@@ -17,12 +17,11 @@ namespace Datamanagement.Models
 
         public List<Book> GetBooks(string connectionString)
         {
-            string ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=RFID_Library;Integrated Security=True; TrustServerCertificate=True";
             string errormsg = null;
             List<Book> bookList = new List<Book>();
-            try
+            try 
             {
-                SqlConnection con = new SqlConnection(ConnectionString);
+                SqlConnection con = new SqlConnection(connectionString);
                 string selectSQL = "select bookId, Title, pagecount, AutherFirstName, AutherLastName, TypeName from GetBookData";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(selectSQL, con);
@@ -51,27 +50,6 @@ namespace Datamanagement.Models
 
                 throw;
             }
-            //SqlConnection con = new SqlConnection(connectionString);
-            //string selectSQL = "select BookId, Title, Isbn, PublisherName, AuthorName, CategoryName from GetBookData";
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand(selectSQL, con);
-            //SqlDataReader dr = cmd.ExecuteReader();
-            //if (dr != null)
-            //{
-            //    while (dr.Read())
-            //    {
-            //        Book book = new Book();
-            //        book.BookId = Convert.ToInt32(dr["BookId"]);
-            //        book.Pagecount = Convert.ToInt32(dr["pagecount"]);
-            //        book.Title = dr["Title"].ToString();
-            //        book.TypeName = dr["TypeName"].ToString();
-            //        book.AutherLastName = dr["AutherLastName"].ToString();
-            //        book.AutherFirstName = dr["AutherFirstName"].ToString();
-
-            //        bookList.Add(book);
-            //    }
-            //}
-            //return bookList;
         }
 
         public Book GetBookData(string connectionString, int bookId)
@@ -114,7 +92,7 @@ namespace Datamanagement.Models
                     cmd.Parameters.Add(new SqlParameter("@Title", book.Title));
                     cmd.Parameters.Add(new SqlParameter("@pagecount", book.Pagecount));
                     cmd.Parameters.Add(new SqlParameter("@AutherLastName", book.AutherLastName));
-                    //cmd.Parameters.Add(new SqlParameter("@AutherFirstName", book.AutherFirstName));
+                    cmd.Parameters.Add(new SqlParameter("@AutherFirstName", book.AutherFirstName));
                     cmd.Parameters.Add(new SqlParameter("@TypeName", book.TypeName));
 
                     con.Open();
@@ -151,6 +129,7 @@ namespace Datamanagement.Models
                 throw ex;
             }
         }
+
         public void DeleteBook(string connectionString, int bookId)
         {
             try

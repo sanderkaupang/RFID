@@ -26,11 +26,11 @@
                 <tr>
                     <td> @book.BookId </td>
                     <td><a href="./EditBook?bookid=@book.BookId">@book.Title</a> </td>
-                    <td> @book.Title </td>
+                    <td> @book.TypeName </td>
                     <td> @book.AutherFirstName </td>
                     <td> @book.AutherLastName </td>
                     <td> @book.Pagecount </td>
-                    <td> @book.TypeName </td>
+                    
                     <td><a href="./DeleteBook?bookid=@book.BookId" class="btn btn-danger" role="button">Delete Book</a> </td>
                 </tr>
             }

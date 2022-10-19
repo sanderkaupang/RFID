@@ -17,14 +17,17 @@ namespace Datamanagement.Pages
         }
         public void OnPost()
         {
+            connectionString = _configuration.GetConnectionString("MyConnectionString");
             Book book = new Book();
             book.BookId = Convert.ToInt32(Request.Form["bookId"]);
             book.Title = Request.Form["Title"];
-            book.TypeName = Request.Form["Type"];
+            book.TypeName = Request.Form["TypeName"];
+            book.Pagecount = Convert.ToInt32(Request.Form["typeId"]);
             book.AutherLastName = Request.Form["AutherLastName"];
+       
             book.AutherFirstName = Request.Form["AutherFirstName"];
             book.Pagecount = Convert.ToInt32(Request.Form["Pagecount"]);
-            connectionString = _configuration.GetConnectionString("ConnectionString");
+
             book.CreateBook(connectionString, book);
             Response.Redirect("./Books");
         }
