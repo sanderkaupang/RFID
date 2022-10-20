@@ -16,5 +16,19 @@ namespace RFID
         {
             InitializeComponent();
         }
+
+        private void btnRegistrate_Click(object sender, EventArgs e)
+        {
+            ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
+            classConnectionSQL.ConnectionToDatabase();
+            //this.Hide();
+
+
+
+            
+            var m = new Form1();     // Choose form is will open after registration
+            m.Show();
+            
+        }
     }
 }

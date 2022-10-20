@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sande\\Desktop\\Semester 3\\Objektorientert programmering\\Oblig\\Data Logging\\DataLoggin\\DataLoggin.csproj",
+      "projectUniqueName": "C:\\Users\\sande\\Documents\\GitHub\\Oblig1s3\\Oblig\\Data Logging\\DataLoggin\\DataLoggin.csproj",
       "projectName": "DataLoggin",
-      "projectPath": "C:\\Users\\sande\\Desktop\\Semester 3\\Objektorientert programmering\\Oblig\\Data Logging\\DataLoggin\\DataLoggin.csproj",
+      "projectPath": "C:\\Users\\sande\\Documents\\GitHub\\Oblig1s3\\Oblig\\Data Logging\\DataLoggin\\DataLoggin.csproj",
       "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sande\\Desktop\\Semester 3\\Objektorientert programmering\\Oblig\\Data Logging\\DataLoggin\\obj\\",
+      "outputPath": "C:\\Users\\sande\\Documents\\GitHub\\Oblig1s3\\Oblig\\Data Logging\\DataLoggin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -16,5 +16,12 @@ namespace RFID
         {
             InitializeComponent();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            var m = new Form1();
+            m.Show();
+            this.Hide();
+        }
     }
 }

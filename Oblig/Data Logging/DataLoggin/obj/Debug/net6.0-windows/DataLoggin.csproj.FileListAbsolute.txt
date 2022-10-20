@@ -15,3 +15,20 @@ C:\Users\sande\Desktop\Semester 3\Objektorientert programmering\Oblig\Data Loggi
 C:\Users\sande\Desktop\Semester 3\Objektorientert programmering\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.pdb
 C:\Users\sande\Desktop\Semester 3\Objektorientert programmering\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.genruntimeconfig.cache
 C:\Users\sande\Desktop\Semester 3\Objektorientert programmering\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\ref\DataLoggin.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\bin\Debug\net6.0-windows\DataLoggin.exe
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\bin\Debug\net6.0-windows\DataLoggin.deps.json
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\bin\Debug\net6.0-windows\DataLoggin.runtimeconfig.json
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\bin\Debug\net6.0-windows\DataLoggin.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\bin\Debug\net6.0-windows\DataLoggin.pdb
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.csproj.AssemblyReference.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.Form1.resources
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.csproj.GenerateResource.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.AssemblyInfoInputs.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.AssemblyInfo.cs
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.csproj.CoreCompileInputs.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\refint\DataLoggin.dll
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.pdb
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\DataLoggin.genruntimeconfig.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\Oblig\Data Logging\DataLoggin\obj\Debug\net6.0-windows\ref\DataLoggin.dll

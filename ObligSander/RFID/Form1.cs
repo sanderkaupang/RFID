@@ -16,12 +16,15 @@ namespace RFID
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            string myCon = ConfigurationManager.ConnectionStrings["conRFID"].ConnectionString;
-            SqlConnection sqlConnection = new SqlConnection(myCon);
+            //string myCon = ConfigurationManager.ConnectionStrings["conRFID"].ConnectionString;
+            //SqlConnection sqlConnection = new SqlConnection(myCon);
+            ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
+            classConnectionSQL.ConnectionToDatabase();
+            //SqlConnection sqlConnection = new SqlConnection();
 
             string sqlQuery = @"SELECT* FROM PERSON WHERE Username= '" + txtBoxTag.Text +
                                  "' AND Password = '" + txtBoxPin.Text + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, myCon);
+            SqlDataAdapter sda = new SqlDataAdapter(sqlQuery,ClassConnectionSQL.myCon);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
