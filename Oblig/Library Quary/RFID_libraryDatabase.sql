@@ -42,8 +42,8 @@ CREATE TABLE PERSON
 	phone                integer  NULL ,
 	email                char(60)  NULL ,
 	dOB                  date  NULL ,
-	Username			 int NOT NULL,
-	Password			 int NOT NULL
+	Username			 char(40) NOT NULL,
+	Password			 char(40) NOT NULL
 )
 go
 

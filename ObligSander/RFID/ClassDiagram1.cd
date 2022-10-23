@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RFID.ClassConnectionSQL">
+    <Position X="15.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAIAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>ClassConnectionSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.ClassRegistrate">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAA4AAAACCAAABAgAQAAQAEEAEAABAACAAAAAgAAIAA=</HashCode>
+      <FileName>ClassRegistrate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
