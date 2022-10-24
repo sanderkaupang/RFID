@@ -19,7 +19,6 @@ namespace RFID
             {
                 ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
                 classConnectionSQL.ConnectionToDatabase();
-
             }
             catch
             {
@@ -70,8 +69,5 @@ namespace RFID
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
-
-                
 }

@@ -3,7 +3,7 @@ CREATE PROCEDURE RegistrateUser
 @lName char(40),
 @phone int,
 @email char(40),
-@dOB int,
+@dOB char(40),
 @Username char(40),
 @Password char(40)
 AS

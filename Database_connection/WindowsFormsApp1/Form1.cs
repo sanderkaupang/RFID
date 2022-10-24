@@ -28,7 +28,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             
         }
-
         void viewResultInDataGridView (string sqlQuery)
         {
             try
@@ -51,9 +50,10 @@ namespace WindowsFormsApp1
 
         private void btnShowValues_Click(object sender, EventArgs e)
         {
-            
+
             string sqlQuery = @"SELECT* FROM PERSON";
             viewResultInDataGridView(sqlQuery);
+
         }
 
         public void dgvAllValues_CellContentClick(object sender, DataGridViewCellEventArgs e)

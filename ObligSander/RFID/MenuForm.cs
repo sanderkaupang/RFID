@@ -23,5 +23,12 @@ namespace RFID
             m.Show();
             this.Hide();
         }
+
+        private void btnViewProfile_Click(object sender, EventArgs e)
+        {
+            var m = new UserProfile();
+            m.Show();
+            this.Hide();
+        }
     }
 }

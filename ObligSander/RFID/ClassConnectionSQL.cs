@@ -15,7 +15,7 @@ namespace RFID
 
         public void ConnectionToDatabase()
         {
-            myCon = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog =RFID_Library;" +
+            myCon = new SqlConnection("Data Source=localhost\\SQLEXPRESS02;Initial Catalog =RFID_Library;" +
                 " Integrated Security = True; TrustServerCertificate=True");
             myCon.Open();
         }

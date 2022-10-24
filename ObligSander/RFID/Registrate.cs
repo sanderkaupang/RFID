@@ -47,7 +47,7 @@ namespace RFID
             var m = new Form1();     // Choose form is will open after registration
             m.Show();
             this.Hide();
-
+    
         }
 
 

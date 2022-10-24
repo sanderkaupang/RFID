@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tQbEwmwbNhB/yTv2K6FnfMCgJvo/mgpLCHbacqm7GQnW3PoirEsAufIMUB8eg1JzHtRZY66hO0xi6XKUYDfJGg==",
+  "dgSpecHash": "nTAD12o5LFt3oserVmLVuVDRltDgBFBYsNbgJzbb503PRcI6FN5khCZmtSV9owfofiGtn4P5tBarHdfzNYYgmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sande\\OneDrive\\Dokumenter\\GitHub\\RFID\\ObligSander\\RFID\\RFID.csproj",
+  "projectFilePath": "C:\\Users\\sande\\Documents\\GitHub\\Oblig1s3\\ObligSander\\RFID\\RFID.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sande\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\sande\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

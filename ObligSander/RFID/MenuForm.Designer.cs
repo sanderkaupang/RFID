@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnViewProfile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -41,11 +42,22 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnViewProfile
+            // 
+            this.btnViewProfile.Location = new System.Drawing.Point(17, 72);
+            this.btnViewProfile.Name = "btnViewProfile";
+            this.btnViewProfile.Size = new System.Drawing.Size(94, 120);
+            this.btnViewProfile.TabIndex = 1;
+            this.btnViewProfile.Text = "View Pefile";
+            this.btnViewProfile.UseVisualStyleBackColor = true;
+            this.btnViewProfile.Click += new System.EventHandler(this.btnViewProfile_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnViewProfile);
             this.Controls.Add(this.btnLogOut);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
@@ -56,5 +68,6 @@
         #endregion
 
         private Button btnLogOut;
+        private Button btnViewProfile;
     }
 }

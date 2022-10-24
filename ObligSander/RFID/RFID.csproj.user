@@ -10,5 +10,14 @@
     <Compile Update="Registrate.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UpdatePersonlia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdateUsernamePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
