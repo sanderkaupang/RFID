@@ -6,7 +6,6 @@ DROP PROCEDURE CreateBook
 GO
 
 CREATE PROCEDURE CreateBook
-@bookId int,
 @Title char(40),
 @AutherFirstName char(40),
 @AutherLastName char(40),
@@ -21,13 +20,30 @@ INSERT INTO AUTHOR (AutherFirstName) VALUES (@AutherFirstName)
 if not exists (select * from AUTHOR where AutherLastName = @AutherLastName)
 INSERT INTO AUTHOR (AutherLastName) VALUES (@AutherLastName)
 
-INSERT INTO BOOK(bookId,Title,typeId,pagecount,authorId)
+INSERT INTO BOOK(Title,pagecount)
 VALUES 
 (
-@bookId,
 @Title,
-@TypeName,
-@pageCount,
+@pageCount
+)
+INSERT INTO TYPE(TypeName)
+VALUES 
+(
+@TypeName
+)
+INSERT INTO AUTHOR (AutherFirstName, AutherLastName)
+VALUES
+(
+@AutherFirstName,
 @AutherLastName
 )
 Go
+
+insert into TYPE(TypeName)
+VALUES
+(
+('Roman')
+)
+GO
+
+SELECT * FROM BOOK

@@ -89,3 +89,5 @@ C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0
 C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.UserProfile.resources
 C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.UpdatePersonlia.resources
 C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.UpdateUsernamePassword.resources
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.Books.resources
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.AddBooks.resources

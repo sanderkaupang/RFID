@@ -30,5 +30,12 @@ namespace RFID
             m.Show();
             this.Hide();
         }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            var m = new Books();
+            m.Show();
+            this.Hide();
+        }
     }
 }
