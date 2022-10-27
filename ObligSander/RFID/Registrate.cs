@@ -32,9 +32,10 @@ namespace RFID
                 string Username = textBoxUsername.Text;
                 string Password = textBoxPassword.Text;
                 string ConfirmPassword = textBoxConfirmPassword.Text;
+                string RfidTag = textBoxRfidTag.Text; 
 
             RegestrateUser regestrateUser = new RegestrateUser();
-            regestrateUser.RegestratenewUser2(fName, lName, Phone, Email, DOB, Username, Password, ConfirmPassword);
+            regestrateUser.RegestratenewUser2(fName, lName, Phone, Email, DOB, Username, Password, ConfirmPassword,RfidTag);
         }
 
 

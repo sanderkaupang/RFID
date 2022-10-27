@@ -10,7 +10,7 @@ namespace RFID
 {
     public class AddBook : ClassConnectionSQL
     {
-        public void RegestrateNewBook(string bookTitle, int pagecount, string bookType, string autherFirstname, string autherLastname)
+        public void RegistrateBook(string bookTitle, int pagecount, string bookType, string autherFirstname, string autherLastname)
         {
             try
             {

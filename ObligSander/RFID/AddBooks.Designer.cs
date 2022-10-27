@@ -43,89 +43,95 @@
             // 
             // textBoxBookTitle
             // 
-            this.textBoxBookTitle.Location = new System.Drawing.Point(70, 56);
+            this.textBoxBookTitle.Location = new System.Drawing.Point(61, 42);
+            this.textBoxBookTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBookTitle.Name = "textBoxBookTitle";
-            this.textBoxBookTitle.Size = new System.Drawing.Size(125, 27);
+            this.textBoxBookTitle.Size = new System.Drawing.Size(110, 23);
             this.textBoxBookTitle.TabIndex = 0;
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(70, 33);
+            this.labelTitle.Location = new System.Drawing.Point(61, 25);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(76, 20);
+            this.labelTitle.Size = new System.Drawing.Size(59, 15);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "Book Title";
             // 
             // labelPagecount
             // 
             this.labelPagecount.AutoSize = true;
-            this.labelPagecount.Location = new System.Drawing.Point(70, 104);
+            this.labelPagecount.Location = new System.Drawing.Point(61, 78);
             this.labelPagecount.Name = "labelPagecount";
-            this.labelPagecount.Size = new System.Drawing.Size(78, 20);
+            this.labelPagecount.Size = new System.Drawing.Size(64, 15);
             this.labelPagecount.TabIndex = 2;
             this.labelPagecount.Text = "Pagecount";
             // 
             // textBoxPagecount
             // 
-            this.textBoxPagecount.Location = new System.Drawing.Point(70, 137);
+            this.textBoxPagecount.Location = new System.Drawing.Point(61, 103);
+            this.textBoxPagecount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPagecount.Name = "textBoxPagecount";
-            this.textBoxPagecount.Size = new System.Drawing.Size(125, 27);
+            this.textBoxPagecount.Size = new System.Drawing.Size(110, 23);
             this.textBoxPagecount.TabIndex = 3;
             // 
             // labelBookType
             // 
             this.labelBookType.AutoSize = true;
-            this.labelBookType.Location = new System.Drawing.Point(70, 186);
+            this.labelBookType.Location = new System.Drawing.Point(61, 140);
             this.labelBookType.Name = "labelBookType";
-            this.labelBookType.Size = new System.Drawing.Size(78, 20);
+            this.labelBookType.Size = new System.Drawing.Size(61, 15);
             this.labelBookType.TabIndex = 4;
             this.labelBookType.Text = "Book Type";
             // 
             // textBoxBookType
             // 
-            this.textBoxBookType.Location = new System.Drawing.Point(70, 218);
+            this.textBoxBookType.Location = new System.Drawing.Point(61, 164);
+            this.textBoxBookType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBookType.Name = "textBoxBookType";
-            this.textBoxBookType.Size = new System.Drawing.Size(125, 27);
+            this.textBoxBookType.Size = new System.Drawing.Size(110, 23);
             this.textBoxBookType.TabIndex = 5;
             // 
             // AutherFirstname
             // 
             this.AutherFirstname.AutoSize = true;
-            this.AutherFirstname.Location = new System.Drawing.Point(70, 278);
+            this.AutherFirstname.Location = new System.Drawing.Point(61, 208);
             this.AutherFirstname.Name = "AutherFirstname";
-            this.AutherFirstname.Size = new System.Drawing.Size(122, 20);
+            this.AutherFirstname.Size = new System.Drawing.Size(99, 15);
             this.AutherFirstname.TabIndex = 6;
             this.AutherFirstname.Text = "Author Firstname";
             // 
             // textBoxAutherFirstname
             // 
-            this.textBoxAutherFirstname.Location = new System.Drawing.Point(70, 310);
+            this.textBoxAutherFirstname.Location = new System.Drawing.Point(61, 232);
+            this.textBoxAutherFirstname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAutherFirstname.Name = "textBoxAutherFirstname";
-            this.textBoxAutherFirstname.Size = new System.Drawing.Size(125, 27);
+            this.textBoxAutherFirstname.Size = new System.Drawing.Size(110, 23);
             this.textBoxAutherFirstname.TabIndex = 7;
             // 
             // textBoxAutherLastname
             // 
-            this.textBoxAutherLastname.Location = new System.Drawing.Point(67, 391);
+            this.textBoxAutherLastname.Location = new System.Drawing.Point(59, 293);
+            this.textBoxAutherLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAutherLastname.Name = "textBoxAutherLastname";
-            this.textBoxAutherLastname.Size = new System.Drawing.Size(125, 27);
+            this.textBoxAutherLastname.Size = new System.Drawing.Size(110, 23);
             this.textBoxAutherLastname.TabIndex = 9;
             // 
             // AutherLastname
             // 
             this.AutherLastname.AutoSize = true;
-            this.AutherLastname.Location = new System.Drawing.Point(67, 359);
+            this.AutherLastname.Location = new System.Drawing.Point(59, 269);
             this.AutherLastname.Name = "AutherLastname";
-            this.AutherLastname.Size = new System.Drawing.Size(121, 20);
+            this.AutherLastname.Size = new System.Drawing.Size(98, 15);
             this.AutherLastname.TabIndex = 8;
             this.AutherLastname.Text = "Author Lastname";
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(234, 365);
+            this.btnAddBook.Location = new System.Drawing.Point(205, 274);
+            this.btnAddBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(121, 53);
+            this.btnAddBook.Size = new System.Drawing.Size(106, 40);
             this.btnAddBook.TabIndex = 10;
             this.btnAddBook.Text = "Add Book";
             this.btnAddBook.UseVisualStyleBackColor = true;
@@ -133,9 +139,9 @@
             // 
             // AddBooks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.textBoxAutherLastname);
             this.Controls.Add(this.AutherLastname);
@@ -147,6 +153,7 @@
             this.Controls.Add(this.labelPagecount);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxBookTitle);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddBooks";
             this.Text = "AddBooks";
             this.ResumeLayout(false);

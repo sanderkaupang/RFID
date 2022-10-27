@@ -52,7 +52,7 @@ namespace RFID
 
         private void btnViewBook_Click(object sender, EventArgs e)
         {
-            string sqlQuery = @"SELECT* FROM BOOK";
+            string sqlQuery = @"SELECT* FROM GetBookData";
             viewInDataGridView(sqlQuery);
         }
 
@@ -62,5 +62,7 @@ namespace RFID
             m.Show();
             this.Hide();
         }
+
+
     }
 }

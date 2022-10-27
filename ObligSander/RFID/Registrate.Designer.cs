@@ -47,8 +47,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnRegistrate = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxRfidTag = new System.Windows.Forms.TextBox();
             this.groupBoxPersonalData.SuspendLayout();
             this.groupBoxUsernamePassword.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxFname
@@ -236,11 +240,39 @@
             this.btnRegistrate.UseVisualStyleBackColor = true;
             this.btnRegistrate.Click += new System.EventHandler(this.btnRegistrate_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBoxRfidTag);
+            this.groupBox1.Location = new System.Drawing.Point(571, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 235);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "RFID Tag";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "RFID Tag";
+            // 
+            // textBoxRfidTag
+            // 
+            this.textBoxRfidTag.Location = new System.Drawing.Point(18, 64);
+            this.textBoxRfidTag.Name = "textBoxRfidTag";
+            this.textBoxRfidTag.Size = new System.Drawing.Size(100, 23);
+            this.textBoxRfidTag.TabIndex = 0;
+            // 
             // Registrate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(833, 408);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegistrate);
             this.Controls.Add(this.groupBoxUsernamePassword);
             this.Controls.Add(this.groupBoxPersonalData);
@@ -251,6 +283,8 @@
             this.groupBoxPersonalData.PerformLayout();
             this.groupBoxUsernamePassword.ResumeLayout(false);
             this.groupBoxUsernamePassword.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +310,8 @@
         private Button btnRegistrate;
         private Label label1;
         private TextBox textBoxConfirmPassword;
+        private GroupBox groupBox1;
+        private Label label2;
+        private TextBox textBoxRfidTag;
     }
 }

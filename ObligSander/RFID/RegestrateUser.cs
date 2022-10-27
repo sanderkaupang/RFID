@@ -13,7 +13,7 @@ namespace RFID
 {
     internal class RegestrateUser : ClassConnectionSQL
     {
-        public void RegestratenewUser2(string fName, string lName, int Phone, string Email, string DOB, string Username, string Password, string ConfirmPassword)
+        public void RegestratenewUser2(string fName, string lName, int Phone, string Email, string DOB, string Username, string Password, string ConfirmPassword, string RfidTag)
         {
             try
             {
@@ -52,7 +52,8 @@ namespace RFID
                         cmd.Parameters.Add(new SqlParameter("@dOB", DOB));
                         cmd.Parameters.Add(new SqlParameter("@Username", Username));
                         cmd.Parameters.Add(new SqlParameter("@Password", Password));
-                        
+                        cmd.Parameters.Add(new SqlParameter("@RfidId", RfidTag));
+
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
