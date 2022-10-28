@@ -32,6 +32,7 @@
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.bntBorrowBook = new System.Windows.Forms.Button();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -77,11 +78,20 @@
             this.bntBorrowBook.UseVisualStyleBackColor = true;
             this.bntBorrowBook.Click += new System.EventHandler(this.bntBorrowBook_Click);
             // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(169, 14);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.ReadOnly = true;
+            this.textBoxUsername.Size = new System.Drawing.Size(100, 23);
+            this.textBoxUsername.TabIndex = 4;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.bntBorrowBook);
             this.Controls.Add(this.btnBooks);
             this.Controls.Add(this.btnViewProfile);
@@ -89,7 +99,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -99,5 +111,6 @@
         private Button btnViewProfile;
         private Button btnBooks;
         private Button bntBorrowBook;
+        private TextBox textBoxUsername;
     }
 }

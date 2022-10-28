@@ -12,6 +12,7 @@ namespace RFID
     {
         public static SqlConnection myCon = null;
         public SqlCommand cmd;
+        public SqlCommand cmd2;
 
         public void ConnectionToDatabase()
         {

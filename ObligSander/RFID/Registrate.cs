@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Security.Cryptography;
+
 
 namespace RFID
 {
@@ -20,6 +25,13 @@ namespace RFID
             InitializeComponent(); 
 
         }
+
+        //
+
+
+
+
+        //
 
         private void RegistrateNewUser()
         {
@@ -41,7 +53,10 @@ namespace RFID
 
         private void btnRegistrate_Click(object sender, EventArgs e)
         {
+            //
 
+
+            //
 
             RegistrateNewUser();
 

@@ -25,9 +25,10 @@ namespace RFID
 
         public void DelUser()
         {
-            string phone = textBoxDeleteAccount.Text;
+            string RFID = textBoxDeleteAccount.Text;
+            string Username = textBoxUsername.Text;
             DeleteUser deleteUser = new DeleteUser();
-            deleteUser.ClassDeleteUser(phone);
+            deleteUser.ClassDeleteUser(RFID, Username);
         }
 
         private void btnUploadProfilePic_Click(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace RFID
             var m = new MenuForm();     // Choose form is will open after registration
             m.Show();
             this.Hide();
+        }
+
+        private void UserProfile_Load(object sender, EventArgs e)
+        {
+            textBoxUsername.Text = Form1.recby;
         }
     }
 }

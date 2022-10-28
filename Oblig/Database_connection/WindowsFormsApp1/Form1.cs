@@ -28,7 +28,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             
         }
-
         void viewResultInDataGridView (string sqlQuery)
         {
             try

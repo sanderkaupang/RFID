@@ -44,5 +44,10 @@ namespace RFID
             m.Show();
             this.Hide();
         }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            textBoxUsername.Text = Form1.recby;
+        }
     }
 }

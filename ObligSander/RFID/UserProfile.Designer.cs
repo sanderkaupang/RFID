@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelphonenumber = new System.Windows.Forms.Label();
             this.buttonBackToMenu = new System.Windows.Forms.Button();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -133,11 +134,21 @@
             this.buttonBackToMenu.UseVisualStyleBackColor = true;
             this.buttonBackToMenu.Click += new System.EventHandler(this.buttonBackToMenu_Click);
             // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(242, 24);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.ReadOnly = true;
+            this.textBoxUsername.Size = new System.Drawing.Size(110, 23);
+            this.textBoxUsername.TabIndex = 24;
+            // 
             // UserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 545);
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.buttonBackToMenu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUpdateUsernamePassword);
@@ -147,10 +158,12 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserProfile";
             this.Text = "UserProfile";
+            this.Load += new System.EventHandler(this.UserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -165,5 +178,6 @@
         private GroupBox groupBox1;
         private Label labelphonenumber;
         private Button buttonBackToMenu;
+        private TextBox textBoxUsername;
     }
 }
