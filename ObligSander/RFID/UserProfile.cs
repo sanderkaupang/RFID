@@ -70,6 +70,13 @@ namespace RFID
             m.Show();
             this.Hide();
         }
+
+        private void buttonBackToMenu_Click(object sender, EventArgs e)
+        {
+            var m = new MenuForm();     // Choose form is will open after registration
+            m.Show();
+            this.Hide();
+        }
     }
 }
 

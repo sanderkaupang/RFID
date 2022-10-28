@@ -50,6 +50,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxRfidTag = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.groupBoxPersonalData.SuspendLayout();
             this.groupBoxUsernamePassword.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -186,7 +187,7 @@
             this.groupBoxPersonalData.Controls.Add(this.textBoxDoB);
             this.groupBoxPersonalData.Controls.Add(this.textBoxEmail);
             this.groupBoxPersonalData.Controls.Add(this.labelEmail);
-            this.groupBoxPersonalData.Location = new System.Drawing.Point(10, 9);
+            this.groupBoxPersonalData.Location = new System.Drawing.Point(34, 61);
             this.groupBoxPersonalData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxPersonalData.Name = "groupBoxPersonalData";
             this.groupBoxPersonalData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -203,7 +204,7 @@
             this.groupBoxUsernamePassword.Controls.Add(this.textBoxUsername);
             this.groupBoxUsernamePassword.Controls.Add(this.lablePassword);
             this.groupBoxUsernamePassword.Controls.Add(this.textBoxPassword);
-            this.groupBoxUsernamePassword.Location = new System.Drawing.Point(337, 9);
+            this.groupBoxUsernamePassword.Location = new System.Drawing.Point(313, 61);
             this.groupBoxUsernamePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxUsernamePassword.Name = "groupBoxUsernamePassword";
             this.groupBoxUsernamePassword.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -231,7 +232,7 @@
             // 
             // btnRegistrate
             // 
-            this.btnRegistrate.Location = new System.Drawing.Point(337, 251);
+            this.btnRegistrate.Location = new System.Drawing.Point(595, 314);
             this.btnRegistrate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrate.Name = "btnRegistrate";
             this.btnRegistrate.Size = new System.Drawing.Size(108, 77);
@@ -244,9 +245,9 @@
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxRfidTag);
-            this.groupBox1.Location = new System.Drawing.Point(571, 12);
+            this.groupBox1.Location = new System.Drawing.Point(556, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 235);
+            this.groupBox1.Size = new System.Drawing.Size(200, 112);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RFID Tag";
@@ -267,11 +268,22 @@
             this.textBoxRfidTag.Size = new System.Drawing.Size(100, 23);
             this.textBoxRfidTag.TabIndex = 0;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(19, 11);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(130, 23);
+            this.btnBack.TabIndex = 18;
+            this.btnBack.Text = "Back To Loin Page";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Registrate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 408);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegistrate);
             this.Controls.Add(this.groupBoxUsernamePassword);
@@ -313,5 +325,6 @@
         private GroupBox groupBox1;
         private Label label2;
         private TextBox textBoxRfidTag;
+        private Button btnBack;
     }
 }

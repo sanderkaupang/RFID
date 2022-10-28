@@ -91,6 +91,17 @@ namespace WindowsFormsApp1
 
             }
         }
-        
+
+        private void btnViewTags_Click(object sender, EventArgs e)
+        {
+            string sqlQuery = @"SELECT* FROM RFID";
+            viewResultInDataGridView(sqlQuery);
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            string sqlQuery = @"SELECT* FROM BOOK";
+            viewResultInDataGridView(sqlQuery);
+        }
     }
 }

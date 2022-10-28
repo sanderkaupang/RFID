@@ -40,5 +40,12 @@ namespace RFID
             UpdateUsePassword();
 
         }
+
+        private void btnBackToProfile_Click(object sender, EventArgs e)
+        {
+            var m = new UserProfile();     // Choose form is will open after registration
+            m.Show();
+            this.Hide();
+        }
     }
 }

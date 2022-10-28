@@ -39,11 +39,12 @@
             this.textBoxAutherLastname = new System.Windows.Forms.TextBox();
             this.AutherLastname = new System.Windows.Forms.Label();
             this.btnAddBook = new System.Windows.Forms.Button();
+            this.buttonBackToBooks = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxBookTitle
             // 
-            this.textBoxBookTitle.Location = new System.Drawing.Point(61, 42);
+            this.textBoxBookTitle.Location = new System.Drawing.Point(63, 115);
             this.textBoxBookTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBookTitle.Name = "textBoxBookTitle";
             this.textBoxBookTitle.Size = new System.Drawing.Size(110, 23);
@@ -52,7 +53,7 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(61, 25);
+            this.labelTitle.Location = new System.Drawing.Point(63, 98);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(59, 15);
             this.labelTitle.TabIndex = 1;
@@ -61,7 +62,7 @@
             // labelPagecount
             // 
             this.labelPagecount.AutoSize = true;
-            this.labelPagecount.Location = new System.Drawing.Point(61, 78);
+            this.labelPagecount.Location = new System.Drawing.Point(63, 151);
             this.labelPagecount.Name = "labelPagecount";
             this.labelPagecount.Size = new System.Drawing.Size(64, 15);
             this.labelPagecount.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // textBoxPagecount
             // 
-            this.textBoxPagecount.Location = new System.Drawing.Point(61, 103);
+            this.textBoxPagecount.Location = new System.Drawing.Point(63, 176);
             this.textBoxPagecount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPagecount.Name = "textBoxPagecount";
             this.textBoxPagecount.Size = new System.Drawing.Size(110, 23);
@@ -78,7 +79,7 @@
             // labelBookType
             // 
             this.labelBookType.AutoSize = true;
-            this.labelBookType.Location = new System.Drawing.Point(61, 140);
+            this.labelBookType.Location = new System.Drawing.Point(63, 213);
             this.labelBookType.Name = "labelBookType";
             this.labelBookType.Size = new System.Drawing.Size(61, 15);
             this.labelBookType.TabIndex = 4;
@@ -86,7 +87,7 @@
             // 
             // textBoxBookType
             // 
-            this.textBoxBookType.Location = new System.Drawing.Point(61, 164);
+            this.textBoxBookType.Location = new System.Drawing.Point(63, 237);
             this.textBoxBookType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBookType.Name = "textBoxBookType";
             this.textBoxBookType.Size = new System.Drawing.Size(110, 23);
@@ -95,7 +96,7 @@
             // AutherFirstname
             // 
             this.AutherFirstname.AutoSize = true;
-            this.AutherFirstname.Location = new System.Drawing.Point(61, 208);
+            this.AutherFirstname.Location = new System.Drawing.Point(63, 281);
             this.AutherFirstname.Name = "AutherFirstname";
             this.AutherFirstname.Size = new System.Drawing.Size(99, 15);
             this.AutherFirstname.TabIndex = 6;
@@ -103,7 +104,7 @@
             // 
             // textBoxAutherFirstname
             // 
-            this.textBoxAutherFirstname.Location = new System.Drawing.Point(61, 232);
+            this.textBoxAutherFirstname.Location = new System.Drawing.Point(63, 305);
             this.textBoxAutherFirstname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAutherFirstname.Name = "textBoxAutherFirstname";
             this.textBoxAutherFirstname.Size = new System.Drawing.Size(110, 23);
@@ -111,7 +112,7 @@
             // 
             // textBoxAutherLastname
             // 
-            this.textBoxAutherLastname.Location = new System.Drawing.Point(59, 293);
+            this.textBoxAutherLastname.Location = new System.Drawing.Point(61, 366);
             this.textBoxAutherLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAutherLastname.Name = "textBoxAutherLastname";
             this.textBoxAutherLastname.Size = new System.Drawing.Size(110, 23);
@@ -120,7 +121,7 @@
             // AutherLastname
             // 
             this.AutherLastname.AutoSize = true;
-            this.AutherLastname.Location = new System.Drawing.Point(59, 269);
+            this.AutherLastname.Location = new System.Drawing.Point(61, 342);
             this.AutherLastname.Name = "AutherLastname";
             this.AutherLastname.Size = new System.Drawing.Size(98, 15);
             this.AutherLastname.TabIndex = 8;
@@ -128,7 +129,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(205, 274);
+            this.btnAddBook.Location = new System.Drawing.Point(207, 347);
             this.btnAddBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(106, 40);
@@ -137,11 +138,22 @@
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
+            // buttonBackToBooks
+            // 
+            this.buttonBackToBooks.Location = new System.Drawing.Point(25, 19);
+            this.buttonBackToBooks.Name = "buttonBackToBooks";
+            this.buttonBackToBooks.Size = new System.Drawing.Size(183, 23);
+            this.buttonBackToBooks.TabIndex = 11;
+            this.buttonBackToBooks.Text = "Back To Books";
+            this.buttonBackToBooks.UseVisualStyleBackColor = true;
+            this.buttonBackToBooks.Click += new System.EventHandler(this.buttonBackToBooks_Click);
+            // 
             // AddBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(752, 512);
+            this.Controls.Add(this.buttonBackToBooks);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.textBoxAutherLastname);
             this.Controls.Add(this.AutherLastname);
@@ -174,5 +186,6 @@
         private TextBox textBoxAutherLastname;
         private Label AutherLastname;
         private Button btnAddBook;
+        private Button buttonBackToBooks;
     }
 }

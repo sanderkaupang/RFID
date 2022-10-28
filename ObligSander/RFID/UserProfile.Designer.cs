@@ -34,22 +34,28 @@
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.textBoxDeleteAccount = new System.Windows.Forms.TextBox();
             this.btnUpdateUsernamePassword = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelphonenumber = new System.Windows.Forms.Label();
+            this.buttonBackToMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbProfilePic
             // 
-            this.pbProfilePic.Location = new System.Drawing.Point(0, 0);
+            this.pbProfilePic.Location = new System.Drawing.Point(31, 89);
+            this.pbProfilePic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbProfilePic.Name = "pbProfilePic";
-            this.pbProfilePic.Size = new System.Drawing.Size(159, 175);
+            this.pbProfilePic.Size = new System.Drawing.Size(202, 174);
             this.pbProfilePic.TabIndex = 0;
             this.pbProfilePic.TabStop = false;
             // 
             // btnUploadProfilePic
             // 
-            this.btnUploadProfilePic.Location = new System.Drawing.Point(25, 196);
+            this.btnUploadProfilePic.Location = new System.Drawing.Point(31, 267);
+            this.btnUploadProfilePic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUploadProfilePic.Name = "btnUploadProfilePic";
-            this.btnUploadProfilePic.Size = new System.Drawing.Size(231, 29);
+            this.btnUploadProfilePic.Size = new System.Drawing.Size(202, 22);
             this.btnUploadProfilePic.TabIndex = 1;
             this.btnUploadProfilePic.Text = "Upload picture";
             this.btnUploadProfilePic.UseVisualStyleBackColor = true;
@@ -57,9 +63,10 @@
             // 
             // btnUpdateUser
             // 
-            this.btnUpdateUser.Location = new System.Drawing.Point(25, 239);
+            this.btnUpdateUser.Location = new System.Drawing.Point(329, 139);
+            this.btnUpdateUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(231, 34);
+            this.btnUpdateUser.Size = new System.Drawing.Size(202, 26);
             this.btnUpdateUser.TabIndex = 17;
             this.btnUpdateUser.Text = "Update Personlia";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
@@ -67,9 +74,10 @@
             // 
             // btnDeleteUser
             // 
-            this.btnDeleteUser.Location = new System.Drawing.Point(25, 350);
+            this.btnDeleteUser.Location = new System.Drawing.Point(17, 116);
+            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(231, 29);
+            this.btnDeleteUser.Size = new System.Drawing.Size(202, 22);
             this.btnDeleteUser.TabIndex = 19;
             this.btnDeleteUser.Text = "Delete Account";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
@@ -77,37 +85,72 @@
             // 
             // textBoxDeleteAccount
             // 
-            this.textBoxDeleteAccount.Location = new System.Drawing.Point(278, 352);
+            this.textBoxDeleteAccount.Location = new System.Drawing.Point(64, 77);
+            this.textBoxDeleteAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDeleteAccount.Name = "textBoxDeleteAccount";
-            this.textBoxDeleteAccount.Size = new System.Drawing.Size(125, 27);
+            this.textBoxDeleteAccount.Size = new System.Drawing.Size(110, 23);
             this.textBoxDeleteAccount.TabIndex = 20;
             // 
             // btnUpdateUsernamePassword
             // 
-            this.btnUpdateUsernamePassword.Location = new System.Drawing.Point(25, 299);
+            this.btnUpdateUsernamePassword.Location = new System.Drawing.Point(329, 174);
+            this.btnUpdateUsernamePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateUsernamePassword.Name = "btnUpdateUsernamePassword";
-            this.btnUpdateUsernamePassword.Size = new System.Drawing.Size(231, 31);
+            this.btnUpdateUsernamePassword.Size = new System.Drawing.Size(202, 23);
             this.btnUpdateUsernamePassword.TabIndex = 21;
             this.btnUpdateUsernamePassword.Text = "Update Uername/ Password";
             this.btnUpdateUsernamePassword.UseVisualStyleBackColor = true;
             this.btnUpdateUsernamePassword.Click += new System.EventHandler(this.btnUpdateUsernamePassword_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelphonenumber);
+            this.groupBox1.Controls.Add(this.btnDeleteUser);
+            this.groupBox1.Controls.Add(this.textBoxDeleteAccount);
+            this.groupBox1.Location = new System.Drawing.Point(596, 89);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(238, 178);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Delete Account";
+            // 
+            // labelphonenumber
+            // 
+            this.labelphonenumber.AutoSize = true;
+            this.labelphonenumber.Location = new System.Drawing.Point(61, 50);
+            this.labelphonenumber.Name = "labelphonenumber";
+            this.labelphonenumber.Size = new System.Drawing.Size(113, 15);
+            this.labelphonenumber.TabIndex = 21;
+            this.labelphonenumber.Text = "Enter phonenumber";
+            // 
+            // buttonBackToMenu
+            // 
+            this.buttonBackToMenu.Location = new System.Drawing.Point(40, 24);
+            this.buttonBackToMenu.Name = "buttonBackToMenu";
+            this.buttonBackToMenu.Size = new System.Drawing.Size(147, 23);
+            this.buttonBackToMenu.TabIndex = 23;
+            this.buttonBackToMenu.Text = "Back To Menu";
+            this.buttonBackToMenu.UseVisualStyleBackColor = true;
+            this.buttonBackToMenu.Click += new System.EventHandler(this.buttonBackToMenu_Click);
+            // 
             // UserProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 581);
+            this.ClientSize = new System.Drawing.Size(1002, 545);
+            this.Controls.Add(this.buttonBackToMenu);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUpdateUsernamePassword);
-            this.Controls.Add(this.textBoxDeleteAccount);
-            this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.btnUploadProfilePic);
             this.Controls.Add(this.pbProfilePic);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserProfile";
             this.Text = "UserProfile";
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -119,5 +162,8 @@
         private Button btnDeleteUser;
         private TextBox textBoxDeleteAccount;
         private Button btnUpdateUsernamePassword;
+        private GroupBox groupBox1;
+        private Label labelphonenumber;
+        private Button buttonBackToMenu;
     }
 }

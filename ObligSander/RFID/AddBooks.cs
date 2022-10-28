@@ -56,6 +56,11 @@ namespace RFID
             this.Hide();
         }
 
-
+        private void buttonBackToBooks_Click(object sender, EventArgs e)
+        {
+            var m = new Books();     // Choose form is will open after registration
+            m.Show();
+            this.Hide();
+        }
     }
 }

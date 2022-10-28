@@ -33,6 +33,7 @@
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.textBoxDeleteBook = new System.Windows.Forms.TextBox();
+            this.btnBackToMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewBook)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +89,22 @@
             this.textBoxDeleteBook.Size = new System.Drawing.Size(133, 23);
             this.textBoxDeleteBook.TabIndex = 5;
             // 
+            // btnBackToMenu
+            // 
+            this.btnBackToMenu.Location = new System.Drawing.Point(18, 8);
+            this.btnBackToMenu.Name = "btnBackToMenu";
+            this.btnBackToMenu.Size = new System.Drawing.Size(149, 23);
+            this.btnBackToMenu.TabIndex = 6;
+            this.btnBackToMenu.Text = "Back To Menu";
+            this.btnBackToMenu.UseVisualStyleBackColor = true;
+            this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1376, 666);
+            this.Controls.Add(this.btnBackToMenu);
             this.Controls.Add(this.textBoxDeleteBook);
             this.Controls.Add(this.btnDeleteBook);
             this.Controls.Add(this.btnAddBook);
@@ -114,5 +126,6 @@
         private Button btnAddBook;
         private Button btnDeleteBook;
         private TextBox textBoxDeleteBook;
+        private Button btnBackToMenu;
     }
 }

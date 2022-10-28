@@ -47,18 +47,21 @@
             this.groupBoxLogIn.Controls.Add(this.labelTag);
             this.groupBoxLogIn.Controls.Add(this.txtBoxPin);
             this.groupBoxLogIn.Controls.Add(this.txtBoxTag);
-            this.groupBoxLogIn.Location = new System.Drawing.Point(28, 29);
+            this.groupBoxLogIn.Location = new System.Drawing.Point(172, 144);
+            this.groupBoxLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxLogIn.Name = "groupBoxLogIn";
-            this.groupBoxLogIn.Size = new System.Drawing.Size(344, 358);
+            this.groupBoxLogIn.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxLogIn.Size = new System.Drawing.Size(301, 268);
             this.groupBoxLogIn.TabIndex = 0;
             this.groupBoxLogIn.TabStop = false;
             this.groupBoxLogIn.Text = "Log in";
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Location = new System.Drawing.Point(213, 128);
+            this.btnLogIn.Location = new System.Drawing.Point(186, 96);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(94, 151);
+            this.btnLogIn.Size = new System.Drawing.Size(82, 113);
             this.btnLogIn.TabIndex = 4;
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = true;
@@ -67,41 +70,44 @@
             // labelPin
             // 
             this.labelPin.AutoSize = true;
-            this.labelPin.Location = new System.Drawing.Point(14, 217);
+            this.labelPin.Location = new System.Drawing.Point(12, 163);
             this.labelPin.Name = "labelPin";
-            this.labelPin.Size = new System.Drawing.Size(29, 20);
+            this.labelPin.Size = new System.Drawing.Size(24, 15);
             this.labelPin.TabIndex = 3;
             this.labelPin.Text = "Pin";
             // 
             // labelTag
             // 
             this.labelTag.AutoSize = true;
-            this.labelTag.Location = new System.Drawing.Point(14, 94);
+            this.labelTag.Location = new System.Drawing.Point(12, 70);
             this.labelTag.Name = "labelTag";
-            this.labelTag.Size = new System.Drawing.Size(32, 20);
+            this.labelTag.Size = new System.Drawing.Size(25, 15);
             this.labelTag.TabIndex = 2;
             this.labelTag.Text = "Tag";
             // 
             // txtBoxPin
             // 
-            this.txtBoxPin.Location = new System.Drawing.Point(14, 252);
+            this.txtBoxPin.Location = new System.Drawing.Point(12, 189);
+            this.txtBoxPin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxPin.Name = "txtBoxPin";
             this.txtBoxPin.PasswordChar = '*';
-            this.txtBoxPin.Size = new System.Drawing.Size(125, 27);
+            this.txtBoxPin.Size = new System.Drawing.Size(110, 23);
             this.txtBoxPin.TabIndex = 1;
             // 
             // txtBoxTag
             // 
-            this.txtBoxTag.Location = new System.Drawing.Point(14, 128);
+            this.txtBoxTag.Location = new System.Drawing.Point(12, 96);
+            this.txtBoxTag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxTag.Name = "txtBoxTag";
-            this.txtBoxTag.Size = new System.Drawing.Size(125, 27);
+            this.txtBoxTag.Size = new System.Drawing.Size(110, 23);
             this.txtBoxTag.TabIndex = 0;
             // 
             // btnRegistrate
             // 
-            this.btnRegistrate.Location = new System.Drawing.Point(76, 131);
+            this.btnRegistrate.Location = new System.Drawing.Point(66, 98);
+            this.btnRegistrate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrate.Name = "btnRegistrate";
-            this.btnRegistrate.Size = new System.Drawing.Size(94, 145);
+            this.btnRegistrate.Size = new System.Drawing.Size(82, 109);
             this.btnRegistrate.TabIndex = 1;
             this.btnRegistrate.Text = "Registrate";
             this.btnRegistrate.UseVisualStyleBackColor = true;
@@ -110,20 +116,23 @@
             // groupBoxRegistrate
             // 
             this.groupBoxRegistrate.Controls.Add(this.btnRegistrate);
-            this.groupBoxRegistrate.Location = new System.Drawing.Point(390, 29);
+            this.groupBoxRegistrate.Location = new System.Drawing.Point(489, 144);
+            this.groupBoxRegistrate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxRegistrate.Name = "groupBoxRegistrate";
-            this.groupBoxRegistrate.Size = new System.Drawing.Size(255, 358);
+            this.groupBoxRegistrate.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxRegistrate.Size = new System.Drawing.Size(223, 268);
             this.groupBoxRegistrate.TabIndex = 2;
             this.groupBoxRegistrate.TabStop = false;
             this.groupBoxRegistrate.Text = "Registrate";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(946, 583);
             this.Controls.Add(this.groupBoxRegistrate);
             this.Controls.Add(this.groupBoxLogIn);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBoxLogIn.ResumeLayout(false);
