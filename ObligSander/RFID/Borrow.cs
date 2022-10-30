@@ -14,7 +14,7 @@ namespace RFID
         {
             try
             {
-                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
+                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL(); // connect to database with classConnectoToDatabase
                 classConnectionSQL.ConnectionToDatabase();
             }
             catch
@@ -24,7 +24,7 @@ namespace RFID
             }
             if (true)
             {
-
+                // send arguments into Query in sql 
                 cmd = new SqlCommand("BorrowBook", ClassConnectionSQL.myCon);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -37,11 +37,10 @@ namespace RFID
 
                
                     cmd.ExecuteNonQuery();
-                MessageBox.Show("Book has been added ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Book is now borrowed ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Error");
             }
 
         }

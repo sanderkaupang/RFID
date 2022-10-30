@@ -16,49 +16,30 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace RFID
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         private Form MenuForm;
         private Form Registrate;
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
-        //
-        private string Encrypt(string clearText)
-        {
-            string EncryptionKey = "MAKV2SPBNI99212";
-            byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
-            using (Aes encryptor = Aes.Create())
-            {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
-                encryptor.Key = pdb.GetBytes(32);
-                encryptor.IV = pdb.GetBytes(16);
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(clearBytes, 0, clearBytes.Length);
-                        cs.Close();
-                    }
-                    clearText = Convert.ToBase64String(ms.ToArray());
-                }
-            }
-            return clearText;
-        }
-        //
+
 
         public static string Username;
+        // method to display username from loginscreen in other forms
         public static string recby
         {
             get { return Username; }
             set { Username = value; }
         }
+
+        // login method makes object of login class
         private void LoginUser()
         {
             recby = txtBoxTag.Text;
             string UserName = txtBoxTag.Text;
-            string Password = Encrypt(txtBoxPin.Text);
+            string Password = txtBoxPin.Text;
 
 
             Login login = new Login();
@@ -74,12 +55,21 @@ namespace RFID
 
         }
 
-
+        // shows registratin form
         private void btnRegistrate_Click(object sender, EventArgs e)
         {
             var m = new Registrate();
             m.Show();
             this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void txtBoxTag_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,38 +18,12 @@ namespace RFID
 {
     internal class RegestrateUser : ClassConnectionSQL
     {
-
-        //
-        private string Encrypt(string clearText)
-        {
-            string EncryptionKey = "MAKV2SPBNI99212";
-            byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
-            using (Aes encryptor = Aes.Create())
-            {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
-                encryptor.Key = pdb.GetBytes(32);
-                encryptor.IV = pdb.GetBytes(16);
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(clearBytes, 0, clearBytes.Length);
-                        cs.Close();
-                    }
-                    clearText = Convert.ToBase64String(ms.ToArray());
-                }
-            }
-            return clearText;
-        }
-
-
-
-        //
+        // get values from registration form 
         public void RegestratenewUser2(string fName, string lName, int Phone, string Email, string DOB, string Username, string Password, string ConfirmPassword, string RfidTag)
         {
             try
             {
-                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
+                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL(); // con to databse 
                 classConnectionSQL.ConnectionToDatabase();
             }
             catch
@@ -57,15 +31,16 @@ namespace RFID
                 MessageBox.Show("Error Writing Data to Database");
             }
 
+            // if form is not filled out correct it will trhow an error to the user 
             if (Password != string.Empty || ConfirmPassword != string.Empty || Username != string.Empty)
             {
-                if (Password == ConfirmPassword)
+                if (Password == ConfirmPassword) 
                 {
                     cmd = new SqlCommand("select * from Person where Username='" + Username + "'", ClassConnectionSQL.myCon);
 
                     SqlDataReader dr = cmd.ExecuteReader();
 
-                    if (dr.Read())
+                    if (dr.Read()) // check if username is in use. if username exist thorw error
                     {
                         dr.Close();
                         MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,17 +48,17 @@ namespace RFID
                     else
                     {
                         dr.Close();
-                        cmd = new SqlCommand("RegistrateUser", ClassConnectionSQL.myCon);
+                        cmd = new SqlCommand("RegistrateUser", ClassConnectionSQL.myCon); // SP sql for registration of a new user 
                         cmd.CommandType = CommandType.StoredProcedure;
 
-
+                        // give SP values to execute
                         cmd.Parameters.Add(new SqlParameter("@fName", fName));
                         cmd.Parameters.Add(new SqlParameter("@lName", lName));
                         cmd.Parameters.Add(new SqlParameter("@phone", Phone));
                         cmd.Parameters.Add(new SqlParameter("@email", Email));
                         cmd.Parameters.Add(new SqlParameter("@dOB", DOB));
                         cmd.Parameters.Add(new SqlParameter("@Username", Username));
-                        cmd.Parameters.Add(new SqlParameter("@Password", Encrypt(Password))); //
+                        cmd.Parameters.Add(new SqlParameter("@Password", Password)); 
                         cmd.Parameters.Add(new SqlParameter("@RfidId", RfidTag));
 
 

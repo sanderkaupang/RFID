@@ -51,9 +51,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxRfidTag = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBoxPersonalData.SuspendLayout();
             this.groupBoxUsernamePassword.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxFname
@@ -187,7 +190,7 @@
             this.groupBoxPersonalData.Controls.Add(this.textBoxDoB);
             this.groupBoxPersonalData.Controls.Add(this.textBoxEmail);
             this.groupBoxPersonalData.Controls.Add(this.labelEmail);
-            this.groupBoxPersonalData.Location = new System.Drawing.Point(34, 61);
+            this.groupBoxPersonalData.Location = new System.Drawing.Point(12, 86);
             this.groupBoxPersonalData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxPersonalData.Name = "groupBoxPersonalData";
             this.groupBoxPersonalData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -204,7 +207,7 @@
             this.groupBoxUsernamePassword.Controls.Add(this.textBoxUsername);
             this.groupBoxUsernamePassword.Controls.Add(this.lablePassword);
             this.groupBoxUsernamePassword.Controls.Add(this.textBoxPassword);
-            this.groupBoxUsernamePassword.Location = new System.Drawing.Point(313, 61);
+            this.groupBoxUsernamePassword.Location = new System.Drawing.Point(292, 89);
             this.groupBoxUsernamePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxUsernamePassword.Name = "groupBoxUsernamePassword";
             this.groupBoxUsernamePassword.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,20 +235,26 @@
             // 
             // btnRegistrate
             // 
-            this.btnRegistrate.Location = new System.Drawing.Point(595, 314);
+            this.btnRegistrate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
+            this.btnRegistrate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrate.FlatAppearance.BorderSize = 0;
+            this.btnRegistrate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrate.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrate.Location = new System.Drawing.Point(292, 436);
             this.btnRegistrate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrate.Name = "btnRegistrate";
-            this.btnRegistrate.Size = new System.Drawing.Size(108, 77);
+            this.btnRegistrate.Size = new System.Drawing.Size(224, 38);
             this.btnRegistrate.TabIndex = 16;
             this.btnRegistrate.Text = "Registrate";
-            this.btnRegistrate.UseVisualStyleBackColor = true;
+            this.btnRegistrate.UseVisualStyleBackColor = false;
             this.btnRegistrate.Click += new System.EventHandler(this.btnRegistrate_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxRfidTag);
-            this.groupBox1.Location = new System.Drawing.Point(556, 61);
+            this.groupBox1.Location = new System.Drawing.Point(531, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 112);
             this.groupBox1.TabIndex = 17;
@@ -270,20 +279,47 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(19, 11);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(15, 12);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 23);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back To Loin Page";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Location = new System.Drawing.Point(-3, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(864, 81);
+            this.panel1.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(295, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(247, 45);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Registrate User";
             // 
             // Registrate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 408);
-            this.Controls.Add(this.btnBack);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(857, 523);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegistrate);
             this.Controls.Add(this.groupBoxUsernamePassword);
@@ -297,6 +333,8 @@
             this.groupBoxUsernamePassword.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -326,5 +364,7 @@
         private Label label2;
         private TextBox textBoxRfidTag;
         private Button btnBack;
+        private Panel panel1;
+        private Label label3;
     }
 }

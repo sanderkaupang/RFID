@@ -31,34 +31,22 @@ namespace RFID
             addBook.RegistrateBook(bookTitle, pagecount, bookType, autherFirstname, autherLastname);
 
         }
-        //private void ChangeBookDetails()
-        //{
-
-        //    string bookTitle = textBoxBookTitle.Text;
-        //    int pagecount = Convert.ToInt32(textBoxPagecount.Text);
-        //    string bookType = textBoxBookType.Text;
-        //    string autherFirstname = textBoxAutherFirstname.Text;
-        //    string autherLastname = textBoxAutherLastname.Text;
 
 
-        //    ChangeBook changeBook = new ChangeBook();   
-        //    changeBook.ChangeBookDetails(bookTitle, pagecount, bookType, autherFirstname, autherLastname);
-
-        //}
-
-
+        // Return to book after and book is registrated
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             RegistrateBook();
 
-            var m = new Books();     // Choose form is will open after registration
+            var m = new Books();     
             m.Show();
             this.Hide();
         }
 
+        // Btn to return to book site if missclick
         private void buttonBackToBooks_Click(object sender, EventArgs e)
         {
-            var m = new Books();     // Choose form is will open after registration
+            var m = new Books();  
             m.Show();
             this.Hide();
         }

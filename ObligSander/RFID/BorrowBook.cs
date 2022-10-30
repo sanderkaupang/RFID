@@ -16,6 +16,7 @@ namespace RFID
         public BorrowBook()
         {
             InitializeComponent();
+            // Display books to borrow in dgv
             string sqlQuery = @"SELECT* FROM GetBookData";
             try
             {
@@ -38,7 +39,7 @@ namespace RFID
 
         public void BorrowBookMethod()
         {
-
+            
             string fromDate = textBoxFromDate.Text;
             string toDate = textBoxToDate.Text;
             string rfidId = textBoxRfidTag.Text;
@@ -46,9 +47,6 @@ namespace RFID
 
             Borrow borrow = new Borrow();
             borrow.BorrowBoks(fromDate, toDate, rfidId, bookId);
-
-
-
         }
 
 
@@ -57,7 +55,7 @@ namespace RFID
 
         private void btnBackToMenu_Click(object sender, EventArgs e)
         {
-            var m = new MenuForm();     // Choose form is will open after registration
+            var m = new MenuForm();     // Back btn to menuForm
             m.Show();
             this.Hide();
         }
@@ -87,15 +85,15 @@ namespace RFID
                 MessageBox.Show(error.Message);
             }
         }
-
+        // delete from borrow so the user can retuern books
         private void brnReturn_Click(object sender, EventArgs e)
         {
             if (true)
-            {
+            {       // Sql command to delete from borrow
                 string sqlQuery2 = @"DELETE FROM Borrow WHERE BORROW.bookId ='" + Convert.ToInt32(textBoxReturnBook.Text) + "'";
                 try
                 {
-                    ClassConnectionSQL classConnection = new ClassConnectionSQL();
+                    ClassConnectionSQL classConnection = new ClassConnectionSQL(); // classConnectionToDatabase
                     classConnection.ConnectionToDatabase();
                     SqlDataAdapter sda;
                     DataTable dt;
@@ -118,7 +116,7 @@ namespace RFID
             }
 
         }
-
+        // view borrowed boos from the user RFID Tag
         private void btnViewBorrowedBooks_Click(object sender, EventArgs e)
         {
             string sqlQuery2 = @"SELECT* FROM Borrow WHERE BORROW.rfidId ='" + textBoxViewBooksBorrowed.Text + "'";

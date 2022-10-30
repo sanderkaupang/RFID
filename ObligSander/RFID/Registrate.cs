@@ -26,14 +26,8 @@ namespace RFID
 
         }
 
-        //
-
-
-
-
-        //
-
-        private void RegistrateNewUser()
+        
+        private void RegistrateNewUser() // method for getting values from user and into Registration class
         {
 
                 string fName = textBoxFname.Text;
@@ -53,14 +47,11 @@ namespace RFID
 
         private void btnRegistrate_Click(object sender, EventArgs e)
         {
-            //
 
-
-            //
 
             RegistrateNewUser();
 
-            var m = new Form1();     // Choose form is will open after registration
+            var m = new LoginForm();     // Go back to Login page when user is crated
             m.Show();
             this.Hide();
     
@@ -68,7 +59,7 @@ namespace RFID
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var m = new Form1();     // Choose form is will open after registration
+            var m = new LoginForm();     // missclick btn. Go back to login page
             m.Show();
             this.Hide();
 

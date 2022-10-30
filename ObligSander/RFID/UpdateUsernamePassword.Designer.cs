@@ -40,8 +40,15 @@
             this.Phone = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.btnBackToProfile = new System.Windows.Forms.Button();
+            this.textBoxname = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBoxUsernamePassword.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxUsernamePassword
@@ -52,7 +59,7 @@
             this.groupBoxUsernamePassword.Controls.Add(this.textBoxUsername);
             this.groupBoxUsernamePassword.Controls.Add(this.lablePassword);
             this.groupBoxUsernamePassword.Controls.Add(this.textBoxPassword);
-            this.groupBoxUsernamePassword.Location = new System.Drawing.Point(12, 51);
+            this.groupBoxUsernamePassword.Location = new System.Drawing.Point(75, 192);
             this.groupBoxUsernamePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxUsernamePassword.Name = "groupBoxUsernamePassword";
             this.groupBoxUsernamePassword.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,33 +121,37 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnUpdateUsernmanePassword);
             this.groupBox1.Controls.Add(this.Phone);
             this.groupBox1.Controls.Add(this.textBoxPhone);
-            this.groupBox1.Location = new System.Drawing.Point(269, 51);
+            this.groupBox1.Location = new System.Drawing.Point(349, 192);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(219, 221);
+            this.groupBox1.Size = new System.Drawing.Size(219, 115);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Confirm with phone";
             // 
             // btnUpdateUsernmanePassword
             // 
-            this.btnUpdateUsernmanePassword.Location = new System.Drawing.Point(5, 145);
+            this.btnUpdateUsernmanePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
+            this.btnUpdateUsernmanePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateUsernmanePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateUsernmanePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateUsernmanePassword.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateUsernmanePassword.Location = new System.Drawing.Point(349, 352);
             this.btnUpdateUsernmanePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateUsernmanePassword.Name = "btnUpdateUsernmanePassword";
-            this.btnUpdateUsernmanePassword.Size = new System.Drawing.Size(109, 30);
+            this.btnUpdateUsernmanePassword.Size = new System.Drawing.Size(219, 39);
             this.btnUpdateUsernmanePassword.TabIndex = 13;
             this.btnUpdateUsernmanePassword.Text = "Update";
-            this.btnUpdateUsernmanePassword.UseVisualStyleBackColor = true;
+            this.btnUpdateUsernmanePassword.UseVisualStyleBackColor = false;
             this.btnUpdateUsernmanePassword.Click += new System.EventHandler(this.btnUpdateUsernmanePassword_Click);
             // 
             // Phone
             // 
             this.Phone.AutoSize = true;
-            this.Phone.Location = new System.Drawing.Point(5, 83);
+            this.Phone.Location = new System.Drawing.Point(6, 45);
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(83, 15);
             this.Phone.TabIndex = 12;
@@ -148,7 +159,7 @@
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(5, 100);
+            this.textBoxPhone.Location = new System.Drawing.Point(6, 62);
             this.textBoxPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(110, 23);
@@ -156,7 +167,11 @@
             // 
             // btnBackToProfile
             // 
-            this.btnBackToProfile.Location = new System.Drawing.Point(12, 8);
+            this.btnBackToProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackToProfile.FlatAppearance.BorderSize = 0;
+            this.btnBackToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToProfile.ForeColor = System.Drawing.Color.White;
+            this.btnBackToProfile.Location = new System.Drawing.Point(3, 12);
             this.btnBackToProfile.Name = "btnBackToProfile";
             this.btnBackToProfile.Size = new System.Drawing.Size(112, 23);
             this.btnBackToProfile.TabIndex = 19;
@@ -164,12 +179,65 @@
             this.btnBackToProfile.UseVisualStyleBackColor = true;
             this.btnBackToProfile.Click += new System.EventHandler(this.btnBackToProfile_Click);
             // 
+            // textBoxname
+            // 
+            this.textBoxname.Location = new System.Drawing.Point(194, 141);
+            this.textBoxname.Name = "textBoxname";
+            this.textBoxname.Size = new System.Drawing.Size(100, 23);
+            this.textBoxname.TabIndex = 20;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnBackToProfile);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(968, 124);
+            this.panel1.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RFID.Properties.Resources._lock;
+            this.pictureBox1.Location = new System.Drawing.Point(141, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(293, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(488, 45);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Change Password Or Username";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(28, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 21);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Current Username : ";
+            // 
             // UpdateUsernamePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
-            this.Controls.Add(this.btnBackToProfile);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(933, 555);
+            this.Controls.Add(this.btnUpdateUsernmanePassword);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textBoxname);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxUsernamePassword);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -180,7 +248,11 @@
             this.groupBoxUsernamePassword.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -198,5 +270,10 @@
         private TextBox textBoxPhone;
         private Button btnUpdateUsernmanePassword;
         private Button btnBackToProfile;
+        private TextBox textBoxname;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Label label2;
+        private Label label3;
     }
 }

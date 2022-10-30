@@ -10,13 +10,13 @@ namespace RFID
     internal class DeleteBook : ClassConnectionSQL
     {
         public void ClassDeleteBook(string bookTitle)
-        {
+        {   // if the user dont enter book title show error
             if (!(bookTitle == string.Empty))
             {
-                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
+                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL(); // con to database
                 classConnectionSQL.ConnectionToDatabase();
 
-                string query = "Delete from BOOK where Title= '" + bookTitle + "'";
+                string query = "Delete from BOOK where Title= '" + bookTitle + "'"; // direct query programming without SP
                 SqlCommand cmd = new SqlCommand(query, ClassConnectionSQL.myCon);
                 SqlDataReader myreader;
                 try

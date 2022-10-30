@@ -11,7 +11,7 @@ namespace RFID
     public class AddBook : ClassConnectionSQL
     {
         public void RegistrateBook(string bookTitle, int pagecount, string bookType, string autherFirstname, string autherLastname)
-        {
+        {   //Connect to Database 
             try
             {
                 ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
@@ -24,7 +24,7 @@ namespace RFID
             }
             if (true)
             {
-                
+                // execute "CreateBook" query
                 cmd = new SqlCommand("CreateBook", ClassConnectionSQL.myCon);
                 cmd.CommandType = CommandType.StoredProcedure;
 

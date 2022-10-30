@@ -72,7 +72,6 @@ C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\bin\Debug\net6.0
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.csproj.AssemblyReference.cache
-C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.Form1.resources
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.MenuForm.resources
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.Registrate.resources
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.csproj.GenerateResource.cache
@@ -82,7 +81,6 @@ C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.csproj.CoreCompileInputs.cache
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.csproj.CopyComplete
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.dll
-C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\refint\RFID.dll
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.pdb
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.genruntimeconfig.cache
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\ref\RFID.dll
@@ -97,3 +95,6 @@ C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.UpdateUsernamePassword.resources
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.UserProfile.resources
 C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.BorrowBook.resources
+C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\bin\Debug\net6.0-windows\ref\RFID.dll
+C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.Properties.Resources.resources
+C:\Users\sande\OneDrive\Dokumenter\GitHub\RFID\ObligSander\RFID\obj\Debug\net6.0-windows\RFID.LoginForm.resources

@@ -18,7 +18,7 @@ namespace RFID
         }
 
 
-        private void UpdateUserPersonlia()
+        private void UpdateUserPersonlia() // method to get userinput into class
         {
 
             string fName = textBoxFname.Text;
@@ -38,7 +38,7 @@ namespace RFID
         {
             UpdateUserPersonlia();
 
-            var m = new UserProfile();     // Choose form is will open after registration
+            var m = new UserProfile();     // missclick btn to go back to ViewProfile (userprofile form) 
             m.Show();
             this.Hide();
         }
@@ -48,6 +48,11 @@ namespace RFID
             var m = new UserProfile();    
             m.Show();
             this.Hide();
+        }
+
+        private void UpdatePersonlia_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

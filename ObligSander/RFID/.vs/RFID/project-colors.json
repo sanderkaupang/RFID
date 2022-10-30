@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "145d0dca-afd0-4566-ba36-e31b03b313c2": {
+      "ProjectGuid": "145d0dca-afd0-4566-ba36-e31b03b313c2",
+      "DisplayName": "RFID",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

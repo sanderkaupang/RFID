@@ -18,6 +18,7 @@ namespace RFID
             InitializeComponent();
         }
 
+        // Use BookTitle to dele book from database
         public void DelBook()
         {
             string bookTitle = textBoxDeleteBook.Text;
@@ -25,6 +26,7 @@ namespace RFID
             deleteBook.ClassDeleteBook(bookTitle);
         }
 
+        // method to view somthing in the dataGridView
         void viewInDataGridView(string sqlQuery)
         {
             try
@@ -50,6 +52,7 @@ namespace RFID
             DelBook();
         }
 
+        // use the method to view in gridview with an sql query as argument
         private void btnViewBook_Click(object sender, EventArgs e)
         {
             string sqlQuery = @"SELECT* FROM GetBookData";
@@ -58,14 +61,14 @@ namespace RFID
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            var m = new AddBooks();     // Choose form is will open after registration
+            var m = new AddBooks();     // open form to add book
             m.Show();
             this.Hide();
         }
 
         private void btnBackToMenu_Click(object sender, EventArgs e)
         {
-            var m = new MenuForm();     // Choose form is will open after registration
+            var m = new MenuForm();     // Go back to menu form
             m.Show();
             this.Hide();
         }

@@ -10,7 +10,7 @@
     <Compile Update="BorrowBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuForm.cs">

@@ -12,39 +12,10 @@ namespace RFID
     {
         public void ClassDeleteUser(string RFID, string Username)
         {
-            //if (!(RFID == string.Empty))
-            //{
-            //    ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
-            //    classConnectionSQL.ConnectionToDatabase();
 
-            //    string query = "Delete from RFID where rfidId= '" + RFID + "' ";
-
-            //    SqlCommand cmd = new SqlCommand(query, ClassConnectionSQL.myCon);
-            //    SqlDataReader myreader;
-
-            //    try
-            //    {
-
-            //        myreader = cmd.ExecuteReader();
-
-            //        MessageBox.Show("successfully data Deleted", "user information");
-            //        while (myreader.Read())
-            //        {
-            //        }
-
-            //    }
-            //    catch (Exception ec)
-            //    {
-            //        MessageBox.Show(ec.Message);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("enter ID which you want to delete", "User information");
-            //}
             try
             {
-                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL();
+                ClassConnectionSQL classConnectionSQL = new ClassConnectionSQL(); // con to database
                 classConnectionSQL.ConnectionToDatabase();
             }
             catch
@@ -54,7 +25,7 @@ namespace RFID
 
             
                 if (!(RFID == string.Empty))
-                {
+                {   // Deleteuser with RFID tag id
                     cmd = new SqlCommand("select * from RFID where rfidId='" + RFID + "'", ClassConnectionSQL.myCon);
 
                     SqlDataReader dr = cmd.ExecuteReader();

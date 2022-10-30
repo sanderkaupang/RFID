@@ -16,36 +16,41 @@ namespace RFID
         {
             InitializeComponent();
         }
+        public void UpdateUsernamePassword_Load(object sender, EventArgs e)
+        {
+            textBoxname.Text = LoginForm.recby;
+        }
 
         private void UpdateUsePassword()
         {
-
+            //Method for updating User Password and not username
 
             int Phone = Convert.ToInt32(textBoxPhone.Text);
             string Username = textBoxUsername.Text;
             string Password = textBoxPassword.Text;
             string ConfirmPassword = textBoxConfirmPassword.Text;
+            string name = textBoxname.Text;
 
             UpdatePasswordUsername updatePasswordUsername = new UpdatePasswordUsername();
-            updatePasswordUsername.UpdateUsernamePAssword(Phone, Username, Password, ConfirmPassword);
-        }
-
-        private void UpdateUsernamePassword_Load(object sender, EventArgs e)
-        {
-
+            updatePasswordUsername.UpdateUsernamePAssword(Phone, Username, Password, ConfirmPassword, name);
         }
 
         private void btnUpdateUsernmanePassword_Click(object sender, EventArgs e)
         {
             UpdateUsePassword();
+            var m = new LoginForm();     // when userinformation is updated. goes back to loin screen.
+            m.Show();
+            this.Hide();
+
 
         }
 
         private void btnBackToProfile_Click(object sender, EventArgs e)
         {
-            var m = new UserProfile();     // Choose form is will open after registration
+            var m = new UserProfile();     // goes back to userprofile
             m.Show();
             this.Hide();
         }
+
     }
 }

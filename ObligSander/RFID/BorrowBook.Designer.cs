@@ -45,12 +45,16 @@
             this.btnViewBorrowedBooks = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.textBoxViewBooksBorrowed = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -119,7 +123,7 @@
             // 
             // brnReturn
             // 
-            this.brnReturn.Location = new System.Drawing.Point(239, 677);
+            this.brnReturn.Location = new System.Drawing.Point(154, 45);
             this.brnReturn.Name = "brnReturn";
             this.brnReturn.Size = new System.Drawing.Size(75, 23);
             this.brnReturn.TabIndex = 3;
@@ -167,14 +171,14 @@
             // 
             // textBoxReturnBook
             // 
-            this.textBoxReturnBook.Location = new System.Drawing.Point(241, 637);
+            this.textBoxReturnBook.Location = new System.Drawing.Point(28, 45);
             this.textBoxReturnBook.Name = "textBoxReturnBook";
             this.textBoxReturnBook.Size = new System.Drawing.Size(100, 23);
             this.textBoxReturnBook.TabIndex = 13;
             // 
             // btnViewBorrowedBooks
             // 
-            this.btnViewBorrowedBooks.Location = new System.Drawing.Point(184, 488);
+            this.btnViewBorrowedBooks.Location = new System.Drawing.Point(156, 45);
             this.btnViewBorrowedBooks.Name = "btnViewBorrowedBooks";
             this.btnViewBorrowedBooks.Size = new System.Drawing.Size(168, 23);
             this.btnViewBorrowedBooks.TabIndex = 14;
@@ -184,19 +188,40 @@
             // 
             // textBoxViewBooksBorrowed
             // 
-            this.textBoxViewBooksBorrowed.Location = new System.Drawing.Point(46, 489);
+            this.textBoxViewBooksBorrowed.Location = new System.Drawing.Point(30, 46);
             this.textBoxViewBooksBorrowed.Name = "textBoxViewBooksBorrowed";
             this.textBoxViewBooksBorrowed.Size = new System.Drawing.Size(100, 23);
             this.textBoxViewBooksBorrowed.TabIndex = 15;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxViewBooksBorrowed);
+            this.groupBox1.Controls.Add(this.btnViewBorrowedBooks);
+            this.groupBox1.Location = new System.Drawing.Point(28, 386);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(417, 113);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Enter RFID to view borrowwed books";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBoxReturnBook);
+            this.groupBox2.Controls.Add(this.brnReturn);
+            this.groupBox2.Location = new System.Drawing.Point(30, 530);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(415, 100);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Enter BookId to return book";
             // 
             // BorrowBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 829);
-            this.Controls.Add(this.textBoxViewBooksBorrowed);
-            this.Controls.Add(this.btnViewBorrowedBooks);
-            this.Controls.Add(this.textBoxReturnBook);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(label4);
             this.Controls.Add(label3);
             this.Controls.Add(label2);
@@ -206,7 +231,6 @@
             this.Controls.Add(this.btnBackToMenu);
             this.Controls.Add(this.textBoxBookId);
             this.Controls.Add(this.textBoxRfidTag);
-            this.Controls.Add(this.brnReturn);
             this.Controls.Add(this.btnBorrow);
             this.Controls.Add(this.dgvBorrowedBooks);
             this.Controls.Add(this.dgvBooks);
@@ -214,6 +238,10 @@
             this.Text = "7";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +264,7 @@
         private Button btnViewBorrowedBooks;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private TextBox textBoxViewBooksBorrowed;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
     }
 }

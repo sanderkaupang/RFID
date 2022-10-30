@@ -3,15 +3,83 @@
   <Class Name="RFID.ClassConnectionSQL">
     <Position X="15.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAIAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAEAAAAAAAAIAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>ClassConnectionSQL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RFID.ClassRegistrate">
-    <Position X="11.5" Y="2" Width="1.5" />
+    <Position X="21" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAA4AAAACCAAABAgAQAAQAEEAEAABAACAAAAAgAAIAA=</HashCode>
       <FileName>ClassRegistrate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.Borrow" Collapsed="true">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Borrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.AddBook" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AddBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.DeleteBook" Collapsed="true">
+    <Position X="9.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DeleteBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.DeleteUser" Collapsed="true">
+    <Position X="17.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DeleteUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.Login" Collapsed="true">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.RegestrateUser" Collapsed="true">
+    <Position X="17.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RegestrateUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.UpdateUserInfo" Collapsed="true">
+    <Position X="17.25" Y="4" Width="1.5" />
+    <InheritanceLine Type="RFID.ClassConnectionSQL" FixedToPoint="true">
+      <Path>
+        <Point X="16.25" Y="4.19" />
+        <Point X="16.25" Y="4.991" />
+        <Point X="16.37" Y="4.991" Type="JumpStart" />
+        <Point X="16.536" Y="4.991" Type="JumpEnd" />
+        <Point X="16.573" Y="4.991" Type="JumpStart" />
+        <Point X="16.74" Y="4.991" Type="JumpEnd" />
+        <Point X="18" Y="4.991" />
+        <Point X="18" Y="4.691" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UpdateUserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RFID.UpdatePasswordUsername" Collapsed="true">
+    <Position X="15.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UpdatePasswordUsername.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

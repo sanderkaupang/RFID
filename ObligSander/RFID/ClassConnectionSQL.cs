@@ -15,7 +15,7 @@ namespace RFID
         public SqlCommand cmd2;
 
         public void ConnectionToDatabase()
-        {
+        {       //connect to database with the connection string under. 
             myCon = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog =RFID_Library2;" +
                 " Integrated Security = True; TrustServerCertificate=True");
             myCon.Open();

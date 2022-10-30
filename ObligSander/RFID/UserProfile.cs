@@ -31,25 +31,11 @@ namespace RFID
             deleteUser.ClassDeleteUser(RFID, Username);
         }
 
-        private void btnUploadProfilePic_Click(object sender, EventArgs e)
-        {
 
-            // open file dialog   
-            OpenFileDialog open = new OpenFileDialog();
-            // image filters  
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                // display image in picture box  
-                pbProfilePic.Image = new Bitmap(open.FileName);
-
-
-            }
-        }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-            var m = new UpdatePersonlia();     // Choose form is will open after registration
+            var m = new UpdatePersonlia();     // goes into UpdatePersonlia form
             m.Show();
             this.Hide();
         }
@@ -58,7 +44,7 @@ namespace RFID
         {
             DelUser();
 
-            var m = new Form1();     // Choose form is will open after registration
+            var m = new LoginForm();     // when account is deleted. goes back to login page 
             m.Show();
             this.Hide();
         }
@@ -67,21 +53,32 @@ namespace RFID
         {
            
             
-            var m = new UpdateUsernamePassword();     // Choose form is will open after registration
+            var m = new UpdateUsernamePassword();     // goes into update username and password form
             m.Show();
             this.Hide();
         }
 
         private void buttonBackToMenu_Click(object sender, EventArgs e)
         {
-            var m = new MenuForm();     // Choose form is will open after registration
+            var m = new MenuForm();     // Goes back to menuForm
             m.Show();
             this.Hide();
         }
 
+
+        private void pbProfilePic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void UserProfile_Load(object sender, EventArgs e)
         {
-            textBoxUsername.Text = Form1.recby;
+            textBoxUsername.Text = LoginForm.recby;
         }
     }
 }
