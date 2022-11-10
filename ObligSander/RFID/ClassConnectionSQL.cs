@@ -12,11 +12,11 @@ namespace RFID
     {
         public static SqlConnection myCon = null;
         public SqlCommand cmd;
-        public SqlCommand cmd2;
+
 
         public void ConnectionToDatabase()
         {       //connect to database with the connection string under. 
-            myCon = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog =RFID_Library2;" +
+            myCon = new SqlConnection("Data Source=localhost\\SQLEXPRESS02;Initial Catalog =RFID_LibraryOblig;" +
                 " Integrated Security = True; TrustServerCertificate=True");
             myCon.Open();
         }

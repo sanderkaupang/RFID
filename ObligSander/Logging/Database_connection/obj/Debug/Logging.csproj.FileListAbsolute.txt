@@ -1,0 +1,12 @@
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\bin\Debug\WindowsFormsApp1.exe
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\Logging.csproj.AssemblyReference.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\Logging.csproj.SuggestedBindingRedirects.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\Logging.csproj.ResolveComReference.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\Logging.csproj.GenerateResource.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\Logging.csproj.CoreCompileInputs.cache
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\WindowsFormsApp1.exe
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\sande\Documents\GitHub\Oblig1s3\ObligSander\Logging\Database_connection\obj\Debug\WindowsFormsApp1.LoggingApp.resources
